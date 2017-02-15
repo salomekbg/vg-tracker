@@ -1,9 +1,10 @@
 # == Schema Information
 #
-# Table name: genres
+# Table name: classifications
 #
 #  id         :integer          not null, primary key
-#  name       :string
+#  game_id    :integer
+#  genre_id   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -11,7 +12,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  game_id: 1
+  genre_id: 1
 
 two:
-  name: MyString
+  game_id: 1
+  genre_id: 1
