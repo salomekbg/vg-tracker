@@ -1,0 +1,2 @@
+class AcquisitionsController < ApplicationController
+end
