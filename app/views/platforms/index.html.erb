@@ -1,0 +1,9 @@
+<h1>List of all the Platforms</h1>
+<% @platforms.map do |platform| %>
+  <h3><p>Platform Name: <%= platform.name %></p></h3>
+  <p>Games Available: <%= platform.games.uniq.empty? ? 'No games to show!' : platform.games.uniq.map {|game| game.title}.join(', ') %></p>
+  <p>Users Who Own This: <%= platform.users.uniq.empty? ? 'No users to show!' : platform.users.uniq.map {|user| user.username}.join(', ') %></p>
+  <p>Genres Available: <%= platform.genres.uniq.empty? ? 'No genres to show!' : platform.genres.uniq.map {|genre| genre.name}.join(', ') %></p>
+  <p>Source That Sell Games For This: <%= platform.sources.uniq.empty? ? 'No sources to show!' : platform.sources.uniq.map {|source| source.name}.join(', ') %></p>
+  <br />
+<% end %>

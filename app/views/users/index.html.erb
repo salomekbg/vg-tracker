@@ -1,0 +1,10 @@
+<h1>List of all the Users</h1>
+<% @users.map do |user| %>
+  <h3><p>Username: <%= user.username %></p></h3>
+  <p>Email: <%= user.email_address %></p>
+  <p>Owned Games: <%= user.games.uniq.empty? ? 'No games to show!' : user.games.uniq.map {|game| game.title}.join(', ') %></p>
+  <p>Genres Played: <%= user.genres.uniq.empty? ? 'No genres to show!' : user.genres.uniq.map {|genre| genre.name}.join(', ') %></p>
+  <p>Consoles Played On: <%= user.platforms.uniq.empty? ? 'No platforms to show!' : user.platforms.uniq.map {|platform| platform.name}.join(', ') %></p>
+  <p>Shopped At: <%= user.sources.uniq.empty? ? 'No sources to show!' : user.sources.uniq.map {|source| source.name}.join(', ') %></p>
+  <br />
+<% end %>
