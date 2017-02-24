@@ -9,9 +9,9 @@
 #
 
 class Source < ApplicationRecord
-  has_many :acquisitions
-  has_many :games, through: :acquisitions
-  has_many :users, through: :games
+  has_many :libraries
+  has_many :users, through: :libraries
+  has_many :games, through: :libraries
+  has_many :platforms, through: :libraries
   has_many :genres, through: :games
-  has_many :platforms, through: :games
 end

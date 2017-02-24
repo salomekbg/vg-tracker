@@ -11,8 +11,9 @@
 #
 
 class User < ApplicationRecord
-  has_many :games
+  has_many :libraries
+  has_many :games, through: :libraries
+  has_many :platforms, through: :libraries
+  has_many :sources, through: :libraries
   has_many :genres, through: :games
-  has_many :platforms, through: :games
-  has_many :sources, through: :games
 end

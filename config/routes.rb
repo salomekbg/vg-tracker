@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
+  resources :libraries
   resources :classifications
-  resources :acquisitions
-  resources :releases
   resources :sources
   resources :platforms
   resources :genres

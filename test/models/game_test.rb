@@ -4,12 +4,7 @@
 #
 #  id                :integer          not null, primary key
 #  title             :string
-#  status            :string
-#  rating            :integer
-#  hours_played      :integer
 #  number_of_players :string
-#  notes             :text
-#  user_id           :integer
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #

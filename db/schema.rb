@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215220131) do
+ActiveRecord::Schema.define(version: 20170224191414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "acquisitions", force: :cascade do |t|
-    t.integer  "game_id"
-    t.integer  "source_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "classifications", force: :cascade do |t|
     t.integer  "game_id"
@@ -31,12 +24,7 @@ ActiveRecord::Schema.define(version: 20170215220131) do
 
   create_table "games", force: :cascade do |t|
     t.string   "title"
-    t.string   "status"
-    t.integer  "rating"
-    t.integer  "hours_played"
     t.string   "number_of_players"
-    t.text     "notes"
-    t.integer  "user_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
@@ -47,17 +35,23 @@ ActiveRecord::Schema.define(version: 20170215220131) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "libraries", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.integer  "platform_id"
+    t.integer  "source_id"
+    t.string   "status"
+    t.integer  "personal_rating"
+    t.integer  "hours_played"
+    t.string   "notes"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "platforms", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "releases", force: :cascade do |t|
-    t.integer  "game_id"
-    t.integer  "platform_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "sources", force: :cascade do |t|

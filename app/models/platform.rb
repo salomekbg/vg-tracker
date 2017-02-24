@@ -9,9 +9,9 @@
 #
 
 class Platform < ApplicationRecord
-  has_many :releases
-  has_many :games, through: :releases
-  has_many :users, through: :games
+  has_many :libraries
+  has_many :users, through: :libraries
+  has_many :games, through: :libraries
+  has_many :sources, through: :libraries
   has_many :genres, through: :games
-  has_many :sources, through: :games
 end
