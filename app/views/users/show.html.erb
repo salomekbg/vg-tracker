@@ -1,0 +1,12 @@
+<h1>Profile for <%= @user.username %></h1>
+<h3>Owned Games:</h3>
+<%= @user.games.empty? ? 'No games to show!' : @user.games.map {|game| game.title}.join(', ') %>
+<br /><br />
+<h3>Genres Played:</h3>
+<%= @user.genres.uniq.empty? ? 'No genres to show!' : @user.genres.uniq.map {|genre| genre.name}.join(', ') %>
+<br /><br />
+<h3>Consoles Played On:</h3>
+<%= @user.platforms.uniq.empty? ? 'No platforms to show!' : @user.platforms.uniq.map {|platform| platform.name}.join(', ') %>
+<br /><br />
+<h3>Shopped At:</h3>
+<%= @user.sources.uniq.empty? ? 'No sources to show!' : @user.sources.uniq.map {|source| source.name}.join(', ') %>
