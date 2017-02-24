@@ -11,4 +11,7 @@
 class Genre < ApplicationRecord
   has_many :classifications
   has_many :games, through: :classifications
+  has_many :users, through: :games
+  has_many :platforms, through: :games
+  has_many :sources, through: :games
 end
