@@ -1,8 +1,6 @@
 <h1>List of all the Games</h1>
-<% @games.map do |game| %>
-  <h3><p>Game title: <%= game.title %></p></h3>
-  <p>Owned By: <%= !game.user ? 'No user to show!' : game.user.username %></p>
-  <p>Genres: <%= game.genres.uniq.empty? ? 'No genres to show!' : game.genres.uniq.map {|genre| genre.name}.join(', ') %></p>
-  <p>Available On: <%= game.platforms.uniq.empty? ? 'No platforms to show!' : game.platforms.uniq.map {|platform| platform.name}.join(', ') %></p>
-  <p>Sources That Sell This Game: <%= game.sources.uniq.empty? ? 'No sources to show!' : game.sources.uniq.map {|source| source.name}.join(', ') %></p>  <br />
-<% end %>
+<ul>
+  <% @games.map do |game| %>
+    <li><h3><%= game.title %></h3></li>
+  <% end %>
+</ul>

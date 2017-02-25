@@ -2,12 +2,11 @@
 #
 # Table name: games
 #
-#  id                :integer          not null, primary key
-#  title             :string
-#  number_of_players :string
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
-#  year              :integer
+#  id         :integer          not null, primary key
+#  title      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  year       :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
