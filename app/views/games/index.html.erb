@@ -1,6 +1,6 @@
 <h1>List of all the Games</h1>
 <ul>
   <% @games.map do |game| %>
-    <li><h3><%= game.title %></h3></li>
+    <li><h3><%= link_to game.title, game %></h3></li>
   <% end %>
 </ul>
