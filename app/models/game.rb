@@ -7,6 +7,7 @@
 #  number_of_players :string
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  year              :integer
 #
 
 class Game < ApplicationRecord
