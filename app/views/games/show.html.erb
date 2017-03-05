@@ -10,4 +10,5 @@
 <h3>Users Playing this Game:
 <%= @game.users.empty? ? 'No users seem to be playing this game!' : @game.users.uniq.map {|user| user.username}.join(', ') %></h3>
 <br /><br />
-<%= link_to 'Edit Game', edit_game_path(@game) %>
+<%= button_to 'Edit Game', edit_game_path(@game), method: 'get' %>
+<%= button_to 'Delete Game', game_path(@game), method: 'delete' %>
