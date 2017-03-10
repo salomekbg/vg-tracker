@@ -1,11 +1,12 @@
 <h1>Add a New Game</h1>
 <%= form_for @game do |f| %>
  <p>
- <h3><%= f.label :title %>:</h3>
+ <h3><%= f.label 'Title:' %></h3>
  <%= f.text_field :title %>
  </p>
+ <br />
  <p>
- <h3><%= f.label :year %>:</h3>
+ <h3><%= f.label 'Year:' %></h3>
  <%= f.text_field :year %>
  </p>
  <br />
