@@ -13,12 +13,6 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     session[:user_id] = @user.id
     redirect_to @user
-
-    # if @user.save
-    #   redirect_to @user
-    # else
-    #   render 'new'
-    # end
   end
 
   def show
