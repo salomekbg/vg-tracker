@@ -1,4 +1,10 @@
-<h1>Welcome to VG Purchases!</h1>
-<br /><br />
-<%= button_to 'Sign Up', '/signup', method: 'get' %>
-<%= button_to 'Sign In', '/signin', method: 'get' %>
+<% if session[:user_id] %>
+  <h1>Welcome to VG Purchases, <%= @user.username %>! </h1>
+  <br /><br />
+  <%= button_to 'See Profile', @user, method: 'get' %>
+  <%= button_to 'Sign Out', '/signout', method: 'delete' %>
+<% else %>
+  <h1>Welcome to VG Purchases!</h1>
+  <%= button_to 'Sign Up', '/signup', method: 'get' %>
+  <%= button_to 'Sign In', '/signin', method: 'get' %>
+<% end %>
