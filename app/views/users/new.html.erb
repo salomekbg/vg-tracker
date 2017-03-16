@@ -1,22 +1,17 @@
 <h1>Sign Up Form</h1>
+<br />
 <%= form_for @user do |f| %>
- <p>
  <h3><%= f.label 'Username:' %></h3>
  <%= f.text_field :username %>
- </p>
  <br />
- <p>
  <h3><%= f.label 'Email Address:' %></h3>
  <%= f.text_field :email_address %>
- </p>
  <br />
  <h3><%= f.label 'Password:' %></h3>
  <%= f.password_field :password %>
- </p>
  <br />
  <h3><%= f.label 'Password Confirmation:' %></h3>
  <%= f.password_field :password_confirmation %>
- </p>
- <br />
+ <br /><br />
  <%= f.submit %>
 <% end %>
