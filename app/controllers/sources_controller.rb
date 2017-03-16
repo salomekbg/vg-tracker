@@ -1,4 +1,6 @@
 class SourcesController < ApplicationController
+  before_action :require_login
+
   def index
     @sources = Source.all
     render 'index'

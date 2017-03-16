@@ -1,4 +1,6 @@
 class PlatformsController < ApplicationController
+  before_action :require_login
+
   def index
     @platforms = Platform.all
     render 'index'

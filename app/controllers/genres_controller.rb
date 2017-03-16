@@ -1,4 +1,6 @@
 class GenresController < ApplicationController
+  before_action :require_login
+
   def index
     @genres = Genre.all
     render 'index'
