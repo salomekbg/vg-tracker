@@ -10,3 +10,5 @@
 <br /><br />
 <h3>Shopped At:</h3>
 <%= @user.sources.uniq.empty? ? 'No sources to show!' : @user.sources.uniq.map {|source| source.name}.join(', ') %>
+<br /><br />
+<%= button_to 'Sign Out', '/signout', method: 'delete' %>
