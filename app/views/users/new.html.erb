@@ -1,5 +1,14 @@
 <h1>Sign Up Form</h1>
 <br />
+
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li class="error"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @user do |f| %>
  <h3><%= f.label 'Username:' %></h3>
  <%= f.text_field :username %>

@@ -12,7 +12,9 @@
 
 class User < ApplicationRecord
   has_secure_password
-  
+  validates :username, presence: true, uniqueness: true
+  validates :email_address, presence: true, uniqueness: true
+
   has_many :libraries
   has_many :games, through: :libraries
   has_many :platforms, through: :libraries
