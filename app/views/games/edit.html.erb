@@ -1,9 +1,19 @@
 <h1>Edit <%= @game.title %></h1>
+<br />
+
+<% if @game.errors.any? %>
+  <ul>
+    <% @game.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @game do |f| %>
-  <%= f.label 'Title:' %>
+  <h3><%= f.label 'Title:' %></h3>
   <%= f.text_field :title %>
-  <br>
-  <%= f.label 'Year:' %>
+  <br />
+  <h3><%= f.label 'Year:' %></h3>
   <%= f.text_field :year %>
   <br /><br />
   <%= f.submit 'Update Game' %>

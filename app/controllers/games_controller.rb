@@ -11,8 +11,11 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
-    @game.save
-    redirect_to @game
+    if @game.save
+      redirect_to @game
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -25,8 +28,11 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    @game.update(game_params)
-    redirect_to game_path(@game)
+    if @game.update(game_params)
+      redirect_to game_path(@game)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
