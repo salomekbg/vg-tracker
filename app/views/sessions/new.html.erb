@@ -1,5 +1,9 @@
 <h1>Sign In</h1>
 <br/>
+<% if @error != "" %>
+  <h2><%= @error %><%= link_to "Sign Up Here", '/signup' %></h2>
+<% end %>
+
 <%= form_for(:session, url: '/signin') do |f| %>
 <h3><%= f.label 'Username:' %></h3>
 <%= f.text_field :username %>
