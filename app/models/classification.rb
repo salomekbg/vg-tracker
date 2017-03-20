@@ -10,6 +10,9 @@
 #
 
 class Classification < ApplicationRecord
+  validates :game_id, presence: true
+  validates :genre_id, presence: true
+  
   belongs_to :game
   belongs_to :genre
 end

@@ -10,6 +10,9 @@
 #
 
 class Game < ApplicationRecord
+  validates :title, presence: true, uniqueness: true
+  validates :year, presence: true
+  
   has_many :libraries
   has_many :users, through: :libraries
   has_many :platforms, through: :libraries

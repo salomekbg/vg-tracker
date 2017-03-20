@@ -9,6 +9,7 @@
 #
 
 class Source < ApplicationRecord
+  validates :name, presence: true, uniqueness: true
   has_many :libraries
   has_many :users, through: :libraries
   has_many :games, through: :libraries

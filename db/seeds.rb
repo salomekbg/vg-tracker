@@ -2,9 +2,9 @@ User.create(username: "nick", email_address: "nick@valentine.com", password: "di
 User.create(username: "sora", email_address: "sora@paopufruit.com", password: "kairi", password_confirmation: "kairi")
 User.create(username: "sarah", email_address: "sarah@kerrigan.com", password: "raynor", password_confirmation: "raynor")
 
-Game.create(title: "Fallout 4")
-Game.create(title: "Kingdom Hearts")
-Game.create(title: "Starcraft")
+Game.create(title: "Fallout 4", year: 2015)
+Game.create(title: "Kingdom Hearts", year: 2003)
+Game.create(title: "Starcraft", year: 1998)
 
 Genre.create(name: "RPG")
 Genre.create(name: "RTS")

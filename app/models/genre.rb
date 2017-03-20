@@ -9,6 +9,8 @@
 #
 
 class Genre < ApplicationRecord
+  validates :name, presence: true, uniqueness: true
+
   has_many :classifications
   has_many :games, through: :classifications
   has_many :users, through: :games

@@ -1,4 +1,14 @@
 <h1>Add a New Game</h1>
+<br />
+
+<% if @game.errors.any? %>
+  <ul>
+    <% @game.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @game do |f| %>
  <p>
  <h3><%= f.label 'Title:' %></h3>

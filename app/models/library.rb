@@ -16,6 +16,11 @@
 #
 
 class Library < ApplicationRecord
+  validates :user_id, presence: true
+  validates :game_id, presence: true
+  validates :platform_id, presence: true
+  validates :source_id, presence: true
+
   belongs_to :user
   belongs_to :game
   belongs_to :platform
