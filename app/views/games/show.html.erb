@@ -12,5 +12,5 @@
 <br /><br />
 <% if @current_user.admin? %>
   <%= button_to 'Edit Game', edit_game_path(@game), method: 'get' %>
-  <%= button_to 'Delete Game', game_path(@game), method: 'delete' %>
+  <%= button_to 'Delete Game', @game, method: 'delete' %>
 <% end %>

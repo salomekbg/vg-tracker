@@ -14,3 +14,4 @@
 <% if session[:user_id] == @user.id%>
   <%= button_to 'Sign Out', '/signout', method: 'delete' %>
 <% end %>
+<%= button_to 'View Games', '/games', method: 'get' %>
