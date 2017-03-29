@@ -1,8 +1,9 @@
 <h1>Sign In</h1>
-<br/>
 <% if @error != "" %>
-  <h2><%= @error %><%= link_to "Sign Up Here", '/signup' %></h2>
+  <h2><%= @error %></h2>
 <% end %>
+<h2>Did you want to <a href="/signup">Sign Up</a> instead?</h2>
+<br />
 
 <%= form_for(:session, url: '/signin') do |f| %>
 <h3><%= f.label 'Username:' %></h3>
