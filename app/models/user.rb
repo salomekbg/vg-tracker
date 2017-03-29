@@ -8,6 +8,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string
+#  role            :string           default("user")
 #
 
 class User < ApplicationRecord
@@ -20,4 +21,8 @@ class User < ApplicationRecord
   has_many :platforms, through: :libraries
   has_many :sources, through: :libraries
   has_many :genres, through: :games
+
+  def admin?
+    self.role == "admin"
+  end
 end

@@ -1,4 +1,4 @@
-User.create(username: "nick", email_address: "nick@valentine.com", password: "diamond", password_confirmation: "diamond")
+User.create(username: "nick", email_address: "nick@valentine.com", password: "diamond", password_confirmation: "diamond", role: "admin")
 User.create(username: "sora", email_address: "sora@paopufruit.com", password: "kairi", password_confirmation: "kairi")
 User.create(username: "sarah", email_address: "sarah@kerrigan.com", password: "raynor", password_confirmation: "raynor")
 
