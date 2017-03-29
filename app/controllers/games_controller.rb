@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   before_action :require_login
+  before_action :require_admin, only: [:new, :edit, :delete]
 
   def index
     @games = Game.all

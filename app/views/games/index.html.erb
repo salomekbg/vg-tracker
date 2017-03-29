@@ -4,3 +4,7 @@
     <li><h3><%= link_to game.title, game_path(game) %></h3></li>
   <% end %>
 </ul>
+<br /><br />
+<% if @current_user.admin? %>
+  <%= button_to 'Add Game', new_game_url, method: 'get' %>
+<% end %>
