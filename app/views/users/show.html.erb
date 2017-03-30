@@ -1,6 +1,12 @@
 <h1>Profile for <%= @user.username %></h1>
 <h3>Owned Games:</h3>
-<%= @user.games.empty? ? 'No games to show!' : @user.games.map {|game| game.title}.join(', ') %>
+<% if @games.empty? %>
+  No games to show!
+<% else %>
+  <% @games.map do |game| %>
+    <li><%= game.title %></li>
+  <% end %>
+<% end %>
 <br /><br />
 <h3>Genres Played:</h3>
 <%= @user.genres.uniq.empty? ? 'No genres to show!' : @user.genres.uniq.map {|genre| genre.name}.join(', ') %>
