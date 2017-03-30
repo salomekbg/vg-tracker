@@ -14,3 +14,4 @@
   <%= button_to 'Edit Game', edit_game_path(@game), method: 'get' %>
   <%= button_to 'Delete Game', @game, method: 'delete' %>
 <% end %>
+<%= button_to 'Add Game to My Profile', new_library_path, method: 'get', params: {game_id: @game.id, game_name: @game.title} %>

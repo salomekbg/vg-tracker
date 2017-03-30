@@ -6,5 +6,5 @@
 </ul>
 <br /><br />
 <% if @current_user.admin? %>
-  <%= button_to 'Add Game', new_game_url, method: 'get' %>
+  <%= button_to 'Add Game', new_game_path, method: 'get' %>
 <% end %>
