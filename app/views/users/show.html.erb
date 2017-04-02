@@ -1,5 +1,6 @@
 <h1>Profile for <%= @user.username %></h1>
-<h3>Owned Games:</h3>
+<br />
+<h3>Games Currently In Your Library:</h3>
 <% if @libraries.empty? %>
   No games to show!
 <% else %>
@@ -10,13 +11,13 @@
 <br />
 <%= button_to 'Add Game to Your Collection', '/games', method: 'get' %>
 <br />
-<h3>Genres Played:</h3>
+<h3>Genres That You Seem to Like Playing:</h3>
 <%= @user.genres.uniq.empty? ? 'No genres to show!' : @user.genres.uniq.map {|genre| genre.name}.join(', ') %>
 <br /><br />
-<h3>Consoles Played On:</h3>
+<h3>Consoles That You Have Played On:</h3>
 <%= @user.platforms.uniq.empty? ? 'No platforms to show!' : @user.platforms.uniq.map {|platform| platform.name}.join(', ') %>
 <br /><br />
-<h3>Shopped At:</h3>
+<h3>Where You've Purchased Your Games At:</h3>
 <%= @user.sources.uniq.empty? ? 'No sources to show!' : @user.sources.uniq.map {|source| source.name}.join(', ') %>
 <br /><br />
 <% if session[:user_id] == @user.id%>
