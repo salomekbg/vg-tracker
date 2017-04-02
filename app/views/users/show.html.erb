@@ -7,7 +7,9 @@
     <li><%= link_to library.game.title, library %></li>
   <% end %>
 <% end %>
-<br /><br />
+<br />
+<%= button_to 'Add Game to Your Collection', '/games', method: 'get' %>
+<br />
 <h3>Genres Played:</h3>
 <%= @user.genres.uniq.empty? ? 'No genres to show!' : @user.genres.uniq.map {|genre| genre.name}.join(', ') %>
 <br /><br />
@@ -20,4 +22,3 @@
 <% if session[:user_id] == @user.id%>
   <%= button_to 'Sign Out', '/signout', method: 'delete' %>
 <% end %>
-<%= button_to 'View Games', '/games', method: 'get' %>
