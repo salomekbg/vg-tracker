@@ -7,7 +7,7 @@ class CreateLibraries < ActiveRecord::Migration[5.0]
       t.integer :source_id
       t.string :status
       t.integer :personal_rating
-      t.integer :hours_played
+      t.string :hours_played
       t.string :notes
 
       t.timestamps
