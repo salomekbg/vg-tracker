@@ -18,6 +18,10 @@ class LibrariesController < ApplicationController
     end
   end
 
+  def show
+    @library = Library.find(params[:id])
+  end
+
   private
 
   def library_params

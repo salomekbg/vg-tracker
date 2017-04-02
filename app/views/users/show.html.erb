@@ -1,10 +1,10 @@
 <h1>Profile for <%= @user.username %></h1>
 <h3>Owned Games:</h3>
-<% if @games.empty? %>
+<% if @libraries.empty? %>
   No games to show!
 <% else %>
-  <% @games.map do |game| %>
-    <li><%= game.title %></li>
+  <% @libraries.map do |library| %>
+    <li><%= link_to library.game.title, library %></li>
   <% end %>
 <% end %>
 <br /><br />
