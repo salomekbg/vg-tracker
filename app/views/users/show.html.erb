@@ -3,6 +3,7 @@
 <h3>Games Currently In Your Library:</h3>
 <% if @libraries.empty? %>
   No games to show!
+  <br />
 <% else %>
   <% @libraries.map do |library| %>
     <li><%= link_to library.game.title, library %></li>

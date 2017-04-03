@@ -6,4 +6,7 @@
 <h3>Hours Played: <%= @library.hours_played %></h3>
 <h3>Notes: <%= @library.notes %></h3>
 <br />
+<%= button_to 'Edit This Entry', edit_library_path, method: 'get'%>
+<%= button_to 'Delete This Entry', @library, method: 'delete'%>
+<br />
 <%= button_to 'Back to My Profile', @current_user, method: 'get' %>
