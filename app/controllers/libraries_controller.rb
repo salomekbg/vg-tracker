@@ -20,6 +20,7 @@ class LibrariesController < ApplicationController
 
   def show
     @library = Library.find(params[:id])
+    @user = User.find(current_user.id)
   end
 
   def destroy
