@@ -1,14 +1,5 @@
-<% if session[:user_id] %>
-  <h1>Welcome <%= @user.username %>! </h1>
-  <br /><br />
-  <div class="entry-buttons">
-    <%= button_to 'See Profile', @user, method: 'get' %>
-    <%= button_to 'Sign Out', '/signout', method: 'delete' %>
-  </div>
-<% else %>
-  <br /><br />
-  <div class="entry-buttons">
-    <%= button_to 'Sign Up', '/signup', method: 'get' %>
-    <%= button_to 'Sign In', '/signin', method: 'get' %>
-  </div>
-<% end %>
+<br /><br />
+<div class="entry-buttons">
+  <%= button_to 'Sign Up', '/signup', method: 'get' %>
+  <%= button_to 'Sign In', '/signin', method: 'get' %>
+</div>
