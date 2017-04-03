@@ -82,9 +82,26 @@ input[type=submit] {
 
 .single-button {
   width: 120px;
-  margin:auto;
+  margin: auto;
 }
 
 select {
   background-color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #476AE8;
+}
+
+a:visited {
+  color: #476AE8;
+}
+
+a:hover {
+  color: green;
 }
