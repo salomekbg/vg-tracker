@@ -1,5 +1,6 @@
 <div class="left">
   <h2>Add <%= params[:game_name] %> to your collection:</h2>
+  <br />
   <%= form_for @library do |f| %>
     <h3><%= f.label 'Platform:' %></h3>
     <%= f.select :platform_id, options_for_select(@platforms.map {|platform| [platform.name, platform.id]}) %>

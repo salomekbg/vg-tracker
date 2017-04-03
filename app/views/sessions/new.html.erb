@@ -4,7 +4,8 @@
   <% if @error != "" %>
     <h2><%= @error %></h2>
   <% end %>
-
+  <br />
+  
   <%= form_for(:session, url: '/signin') do |f| %>
     <h3><%= f.label 'Username:' %></h3>
     <%= f.text_field :username %>

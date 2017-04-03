@@ -1,5 +1,6 @@
 <div class="left">
   <h2>Game Directory:</h2>
+  <br />
   <ul>
     <% @games.sort_by {|game| game.title}.map do |game| %>
       <li><h3><%= link_to game.title, game_path(game) %></h3></li>
