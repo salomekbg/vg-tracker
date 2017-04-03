@@ -3,7 +3,7 @@ class LibrariesController < ApplicationController
 
   def new
     @library = Library.new
-    @games = Game.all
+    # @games = Game.all
     @platforms = Platform.all
     @sources = Source.all
   end
@@ -20,6 +20,20 @@ class LibrariesController < ApplicationController
 
   def show
     @library = Library.find(params[:id])
+  end
+
+  def edit
+    @library = Library.find(params[:id])
+  end
+
+  def update
+  end
+
+  def destroy
+    @library = Library.find(params[:id])
+    @library.delete
+    @libraries = Library.all
+    render "index"
   end
 
   private
