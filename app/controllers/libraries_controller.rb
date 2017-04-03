@@ -24,8 +24,9 @@ class LibrariesController < ApplicationController
   end
 
   def edit
-    byebug
     @library = Library.find(params[:id])
+    @platforms = Platform.all
+    @sources = Source.all
   end
 
   def update
