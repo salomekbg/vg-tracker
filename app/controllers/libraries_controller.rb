@@ -23,6 +23,20 @@ class LibrariesController < ApplicationController
     @user = User.find(current_user.id)
   end
 
+  def edit
+    @library = Library.find(params[:id])
+  end
+
+  def update
+    @library = Library.find(params[:id])
+    @user = User.find(current_user.id)
+    if @library.update(library_params)
+      redirect_to user_path(@user)
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     @library = Library.find(params[:id])
     @library.delete
