@@ -1,17 +1,19 @@
-<h2>Information for <%= @game.title %>:</h2>
-<h3>Year:
-<%= !@game.year ? 'No year to show!' : @game.year %></h3>
-<h3>Genres:
-<%= @game.genres.empty? ? 'No genres have been assigned yet!' : @game.genres.uniq.map {|genre| genre.name}.join(', ') %></h3>
-<h3>Available Platforms:
-<%= @game.platforms.empty? ? 'No platforms have been assigned yet!' : @game.platforms.uniq.map {|platform| platform.name}.join(', ') %></h3>
-<h3>Purchased From:
-<%= @game.sources.empty? ? 'No retailers have been assigned yet!' : @game.sources.uniq.map {|source| source.name}.join(', ') %></h3>
-<h3>Users Playing this Game:
-<%= @game.users.empty? ? 'No users seem to be playing this game!' : @game.users.uniq.map {|user| user.username}.join(', ') %></h3>
-<br /><br />
-<% if @current_user.admin? %>
-  <%= button_to 'Edit Game', edit_game_path, method: 'get' %>
-  <%= button_to 'Delete Game', @game, method: 'delete' %>
-<% end %>
-<%= button_to 'Add Game to My Profile', new_library_path, method: 'get', params: {game_id: @game.id, game_name: @game.title} %>
+<div class="left">
+  <h2>Information for <%= @game.title %>:</h2>
+  <h3>Year:
+  <%= !@game.year ? 'No year to show!' : @game.year %></h3>
+  <h3>Genres:
+  <%= @game.genres.empty? ? 'No genres have been assigned yet!' : @game.genres.uniq.map {|genre| genre.name}.join(', ') %></h3>
+  <h3>Available Platforms:
+  <%= @game.platforms.empty? ? 'No platforms have been assigned yet!' : @game.platforms.uniq.map {|platform| platform.name}.join(', ') %></h3>
+  <h3>Purchased From:
+  <%= @game.sources.empty? ? 'No retailers have been assigned yet!' : @game.sources.uniq.map {|source| source.name}.join(', ') %></h3>
+  <h3>Users Playing this Game:
+  <%= @game.users.empty? ? 'No users seem to be playing this game!' : @game.users.uniq.map {|user| user.username}.join(', ') %></h3>
+  <br /><br />
+  <% if @current_user.admin? %>
+    <%= button_to 'Edit Game', edit_game_path, method: 'get' %>
+    <%= button_to 'Delete Game', @game, method: 'delete' %>
+  <% end %>
+  <%= button_to 'Add Game to My Profile', new_library_path, method: 'get', params: {game_id: @game.id, game_name: @game.title}, class: 'addgame' %>
+</div>

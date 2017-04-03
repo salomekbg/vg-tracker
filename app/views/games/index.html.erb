@@ -1,10 +1,12 @@
-<h2>Game Directory:</h2>
-<ul>
-  <% @games.sort_by {|game| game.title}.map do |game| %>
-    <li><h3><%= link_to game.title, game_path(game) %></h3></li>
+<div class="left">
+  <h2>Game Directory:</h2>
+  <ul>
+    <% @games.sort_by {|game| game.title}.map do |game| %>
+      <li><h3><%= link_to game.title, game_path(game) %></h3></li>
+    <% end %>
+  </ul>
+  <br /><br />
+  <% if @current_user.admin? %>
+    <%= button_to 'Add Game', new_game_path, method: 'get' %>
   <% end %>
-</ul>
-<br /><br />
-<% if @current_user.admin? %>
-  <%= button_to 'Add Game', new_game_path, method: 'get' %>
-<% end %>
+</div>
