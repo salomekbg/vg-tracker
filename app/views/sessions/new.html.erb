@@ -1,16 +1,18 @@
-<h1>Sign In</h1>
+<h2>SIGN IN:</h2>
 <% if @error != "" %>
   <h2><%= @error %></h2>
 <% end %>
-<h2>Did you want to <a href="/signup">Sign Up</a> instead?</h2>
-<br />
 
 <%= form_for(:session, url: '/signin') do |f| %>
-<h3><%= f.label 'Username:' %></h3>
-<%= f.text_field :username %>
-<br />
-<h3><%= f.label 'Password:' %></h3>
-<%= f.password_field :password %>
-<br /><br />
-<%= f.submit 'Sign In'%>
+  <h3><%= f.label 'Username:' %></h3>
+  <%= f.text_field :username %>
+  <br />
+  <h3><%= f.label 'Password:' %></h3>
+  <%= f.password_field :password %>
+  <br /><br />
+  <div class="single-submit">
+    <%= f.submit 'Sign In'%>
+  </div>
 <% end %>
+<br /><br /><br />
+<h2>Did you want to <a href="/signup">Sign Up</a> instead?</h2>

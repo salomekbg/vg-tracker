@@ -13,3 +13,61 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Sniglet');
+
+body {
+ font-family: 'Sniglet', cursive;
+ background-image: url('sayagata-400px.png');
+ text-align: center;
+ margin: 0;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  font-size: 50px;
+}
+
+h1, h2 {
+ font-family: 'Love Ya Like A Sister', cursive;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+input[type=text], input[type=password] {
+  font-family: 'Sniglet', cursive;
+  padding: 10px;
+  font-size: 14px;
+}
+
+select {
+  padding: 10px;
+  font-size: 14px;
+}
+
+input[type=submit] {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 120px;
+  float: left;
+  display: inline;
+  font-size: 14px;
+  font-family: 'Sniglet', cursive;
+  margin-right: 15px;
+}
+
+.entry-buttons {
+  width: 17%;
+  margin: auto;
+}
+
+.single-submit {
+  width: 120px;
+  margin: auto;
+}

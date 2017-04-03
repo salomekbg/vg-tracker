@@ -1,7 +1,4 @@
-<h1>Sign Up</h1>
-<h2>Did you want to <a href="/signin">Sign In</a> instead?</h2>
-<br />
-
+<h2>SIGN UP:</h2>
 <% if @user.errors.any? %>
   <ul>
     <% @user.errors.full_messages.each do |msg| %>
@@ -23,5 +20,10 @@
  <h3><%= f.label 'Password Confirmation:' %></h3>
  <%= f.password_field :password_confirmation %>
  <br /><br />
- <%= f.submit 'Create Account' %>
+ <div class="single-submit">
+  <%= f.submit 'Create Account' %>
+
+ </div>
 <% end %>
+<br /><br /><br />
+<h2>Did you want to <a href="/signin">Sign In</a> instead?</h2>
