@@ -1,4 +1,4 @@
-<h1>Edit Entry for <%= @library.game.title%></h1>
+<h2>Edit Entry for <%= @library.game.title%>:</h2>
 <%= form_for @library do |f| %>
   <h3><%= f.label 'Platform:' %></h3>
   <%= f.select :platform_id, options_for_select(@platforms.map {|platform| [platform.name, platform.id]}) %>

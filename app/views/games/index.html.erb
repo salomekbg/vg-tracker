@@ -1,4 +1,4 @@
-<h1>List of all the Games</h1>
+<h2>Game Directory:</h2>
 <ul>
   <% @games.sort_by {|game| game.title}.map do |game| %>
     <li><h3><%= link_to game.title, game_path(game) %></h3></li>
