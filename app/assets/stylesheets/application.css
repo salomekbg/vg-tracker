@@ -65,6 +65,10 @@ input[type=submit] {
   width: 120px;
 }
 
+form .search-games {
+  float: none;
+}
+
 .entry-buttons {
   width: 17%;
   margin: auto;
