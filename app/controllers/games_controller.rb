@@ -5,7 +5,12 @@ class GamesController < ApplicationController
   before_action :require_admin, only: [:new, :edit, :delete]
 
   def index
-    @games = Game.all
+    if params[:search]
+      IgdbApi.get_games(params[:search])
+      @games = Game.search(params[:search]).order(:title)
+    else
+      @games = Game.all.order(:title)
+    end
   end
 
   def new
