@@ -1,3 +1,5 @@
+require_relative '../adapters/igdb_api.rb'
+
 class GamesController < ApplicationController
   before_action :require_login
   before_action :require_admin, only: [:new, :edit, :delete]
