@@ -8,8 +8,12 @@
   <h4>*Game data has been provided by API from igdb.com</h4>
   <br />
   <ul>
-    <% @games.sort_by {|game| game.title}.map do |game| %>
-      <li><h3><%= link_to game.title, game_path(game) %></h3></li>
+    <% if @games.empty? %>
+      <li><h3>No games found, please try again!</h3></li>
+    <% else %>
+      <% @games.sort_by {|game| game.title}.map do |game| %>
+        <li><h3><%= link_to game.title, game_path(game) %></h3></li>
+      <% end %>
     <% end %>
   </ul>
   <br /><br />
