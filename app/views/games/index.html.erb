@@ -5,6 +5,7 @@
     <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
     <%= submit_tag("Search", class: "search-games") %>
   <% end %>
+  <h4>*Game data has been provided by API from igdb.com</h4>
   <br />
   <ul>
     <% @games.sort_by {|game| game.title}.map do |game| %>
