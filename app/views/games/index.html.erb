@@ -1,6 +1,11 @@
 <div class="left">
   <h2>Game Directory:</h2>
   <br />
+  <%= form_tag(games_path, method: "get", id: "game-search") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
+    <%= submit_tag("Search", class: "search-games") %>
+  <% end %>
+  <br />
   <ul>
     <% @games.sort_by {|game| game.title}.map do |game| %>
       <li><h3><%= link_to game.title, game_path(game) %></h3></li>
