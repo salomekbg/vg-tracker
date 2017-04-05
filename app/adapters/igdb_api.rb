@@ -6,7 +6,14 @@ class IgdbApi
       "X-Mashape-Key" => "LC6dJEpGZVmshUoieKLHL6Gumqwwp1rTJmvjsnJhpSSyDsSUd7",
       "Accept" => "application/json"
     }
-    results.body
+
+    results.body.each do |result|
+      if result["release_dates"]
+        Game.find_or_create_by(title: result["name"], year: result["release_dates"][0]["human"][0..3])
+      else
+        Game.find_or_create_by(title: result["name"], year: 0000)
+      end
+    end
   end
 
 end
