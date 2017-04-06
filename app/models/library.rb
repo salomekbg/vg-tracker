@@ -9,7 +9,7 @@
 #  source_id       :integer
 #  status          :string
 #  personal_rating :integer
-#  hours_played    :integer
+#  hours_played    :string
 #  notes           :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null

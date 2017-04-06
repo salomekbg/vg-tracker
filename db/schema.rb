@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170329154940) do
 
   create_table "games", force: :cascade do |t|
     t.string   "title"
-    t.integer  "year"
+    t.string   "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20170329154940) do
     t.integer  "source_id"
     t.string   "status"
     t.integer  "personal_rating"
-    t.integer  "hours_played"
+    t.string   "hours_played"
     t.string   "notes"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
