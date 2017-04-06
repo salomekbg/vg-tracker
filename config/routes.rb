@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :themes
+  resources :modes
   resources :libraries
   resources :classifications
   resources :sources

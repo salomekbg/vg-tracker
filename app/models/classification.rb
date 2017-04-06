@@ -12,7 +12,9 @@
 class Classification < ApplicationRecord
   validates :game_id, presence: true
   validates :genre_id, presence: true
-  
+
   belongs_to :game
   belongs_to :genre
+  belongs_to :mode
+  belongs_to :theme
 end
