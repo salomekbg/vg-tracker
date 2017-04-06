@@ -9,9 +9,9 @@ class IgdbApi
 
     results.body.each do |result|
       if result["release_dates"]
-        Game.find_or_create_by(title: result["name"], year: result["release_dates"][0]["human"][0..3])
+        Game.find_or_create_by(name: result["name"], year: result["release_dates"][0]["human"][0..3])
       else
-        Game.find_or_create_by(title: result["name"], year: "No Year Available")
+        Game.find_or_create_by(name: result["name"], year: "No Year Available")
       end
     end
   end

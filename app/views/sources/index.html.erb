@@ -1,7 +1,7 @@
 <h1>List of all the Sources</h1>
 <% @sources.map do |source| %>
   <h3><p>Source Name: <%= source.name %></p></h3>
-  <p>Games Here: <%= source.games.uniq.empty? ? 'No games to show!' : source.games.uniq.map {|game| game.title}.join(', ') %></p>
+  <p>Games Here: <%= source.games.uniq.empty? ? 'No games to show!' : source.games.uniq.map {|game| game.name}.join(', ') %></p>
   <p>Users Who Shopped Here: <%= source.users.uniq.empty? ? 'No users to show!' : source.users.uniq.map {|user| user.username}.join(', ') %></p>
   <p>Genres Found Here: <%= source.genres.uniq.empty? ? 'No genres to show!' : source.genres.uniq.map {|genre| genre.name}.join(', ') %></p>
   <p>Platforms Available Here: <%= source.platforms.uniq.empty? ? 'No platforms to show!' : source.platforms.uniq.map {|platform| platform.name}.join(', ') %></p>

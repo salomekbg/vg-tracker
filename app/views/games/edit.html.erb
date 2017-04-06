@@ -1,5 +1,5 @@
 <div class="left">
-  <h2>Edit <%= @game.title %>:</h2>
+  <h2>Edit <%= @game.name %>:</h2>
   <br />
 
   <% if @game.errors.any? %>
@@ -11,8 +11,8 @@
   <% end %>
 
   <%= form_for @game do |f| %>
-    <h3><%= f.label 'Title:' %></h3>
-    <%= f.text_field :title %>
+    <h3><%= f.label 'Name:' %></h3>
+    <%= f.text_field :name %>
     <br />
     <h3><%= f.label 'Year:' %></h3>
     <%= f.text_field :year %>

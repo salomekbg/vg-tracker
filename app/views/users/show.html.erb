@@ -9,7 +9,7 @@
     <br />
   <% else %>
     <% @libraries.map do |library| %>
-      <li><%= link_to library.game.title, library %></li>
+      <li><%= link_to library.game.name, library %></li>
     <% end %>
   <% end %>
   <br />

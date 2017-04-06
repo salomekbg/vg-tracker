@@ -12,7 +12,7 @@
 #
 
 class Game < ApplicationRecord
-  validates :title, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
   validates :year, presence: true
 
   has_many :libraries
@@ -23,6 +23,6 @@ class Game < ApplicationRecord
   has_many :genres, through: :classifications
 
   def self.search(term)
-    where("LOWER(title) LIKE ?", "%#{term.downcase}%")
+    where("LOWER(name) LIKE ?", "%#{term.downcase}%")
   end
 end

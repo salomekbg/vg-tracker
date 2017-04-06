@@ -1,7 +1,7 @@
 <h1>List of all the Genres</h1>
 <% @genres.map do |genre| %>
   <h3><p>Genre name: <%= genre.name %></p></h3>
-  <p>Games Available: <%= genre.games.uniq.empty? ? 'No games to show!' : genre.games.uniq.map {|game| game.title}.join(', ') %></p>
+  <p>Games Available: <%= genre.games.uniq.empty? ? 'No games to show!' : genre.games.uniq.map {|game| game.name}.join(', ') %></p>
   <p>Users Who Play: <%= genre.users.uniq.empty? ? 'No users to show!' : genre.users.uniq.map {|user| user.username}.join(', ') %></p>
   <p>Platforms Available: <%= genre.platforms.uniq.empty? ? 'No platforms to show!' : genre.platforms.uniq.map {|platform| platform.name}.join(', ') %></p>
   <p>Sources That Sell These Types of Games: <%= genre.sources.uniq.empty? ? 'No sources to show!' : genre.sources.uniq.map {|source| source.name}.join(', ') %></p>
