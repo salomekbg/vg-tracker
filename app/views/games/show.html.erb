@@ -1,8 +1,11 @@
 <div class="left">
   <h2>Information for <%= @game.name %>:</h2>
   <br />
+  <img src="<%= @game.cover%>">
   <h3>Year:
   <%= !@game.year ? 'No year to show!' : @game.year %></h3>
+  <h3>Summary:
+  <%= !@game.summary ? 'No summary to show!' : @game.summary %></h3>
   <h3>Genres:
   <%= @game.genres.empty? ? 'No genres have been assigned yet!' : @game.genres.uniq.map {|genre| genre.name}.join(', ') %></h3>
   <h3>Available Platforms:
