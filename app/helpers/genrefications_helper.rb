@@ -1,0 +1,2 @@
+module GenreficationsHelper
+end

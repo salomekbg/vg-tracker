@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: genrefications
+#
+#  id         :integer          not null, primary key
+#  game_id    :integer
+#  genre_id   :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_id: 1
+  genre_id: 1
+
+two:
+  game_id: 1
+  genre_id: 1

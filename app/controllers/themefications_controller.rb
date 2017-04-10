@@ -1,0 +1,2 @@
+class ThemeficationsController < ApplicationController
+end

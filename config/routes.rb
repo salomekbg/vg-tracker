@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :themefications
+  resources :modefications
   resources :themes
   resources :modes
   resources :libraries
-  resources :classifications
+  resources :genrefications
   resources :sources
   resources :platforms
   resources :genres

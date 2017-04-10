@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: classifications
+# Table name: genrefications
 #
 #  id         :integer          not null, primary key
 #  game_id    :integer
@@ -9,12 +9,10 @@
 #  updated_at :datetime         not null
 #
 
-class Classification < ApplicationRecord
+class Genrefication < ApplicationRecord
   validates :game_id, presence: true
   validates :genre_id, presence: true
 
   belongs_to :game
   belongs_to :genre
-  belongs_to :mode
-  belongs_to :theme
 end

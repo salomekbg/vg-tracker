@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: classifications
+# Table name: genrefications
 #
 #  id         :integer          not null, primary key
 #  game_id    :integer
@@ -9,12 +9,10 @@
 #  updated_at :datetime         not null
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+require 'test_helper'
 
-one:
-  game_id: 1
-  genre_id: 1
-
-two:
-  game_id: 1
-  genre_id: 1
+class GenreficationTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

@@ -19,8 +19,12 @@ class Game < ApplicationRecord
   has_many :users, through: :libraries
   has_many :platforms, through: :libraries
   has_many :sources, through: :libraries
-  has_many :classifications
-  has_many :genres, through: :classifications
+  has_many :genrefications
+  has_many :genres, through: :genrefications
+  has_many :modefications
+  has_many :modes, through: :modefications
+  has_many :themefications
+  has_many :themes, through: :themefications
 
   def self.search(term)
     where("LOWER(name) LIKE ?", "%#{term.downcase}%")

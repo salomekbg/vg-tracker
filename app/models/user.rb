@@ -21,6 +21,8 @@ class User < ApplicationRecord
   has_many :platforms, through: :libraries
   has_many :sources, through: :libraries
   has_many :genres, through: :games
+  has_many :modes, through: :games
+  has_many :themes, through: :games
 
   def admin?
     self.role == "admin"

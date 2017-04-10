@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170406213443) do
+ActiveRecord::Schema.define(version: 20170410182720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "classifications", force: :cascade do |t|
-    t.integer  "game_id"
-    t.integer  "genre_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "games", force: :cascade do |t|
     t.string   "year"
@@ -29,6 +22,13 @@ ActiveRecord::Schema.define(version: 20170406213443) do
     t.string   "name"
     t.string   "summary"
     t.string   "cover"
+  end
+
+  create_table "genrefications", force: :cascade do |t|
+    t.integer  "game_id"
+    t.integer  "genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "genres", force: :cascade do |t|
@@ -52,6 +52,13 @@ ActiveRecord::Schema.define(version: 20170406213443) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "modefications", force: :cascade do |t|
+    t.integer  "game_id"
+    t.integer  "mode_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "modes", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -66,6 +73,13 @@ ActiveRecord::Schema.define(version: 20170406213443) do
 
   create_table "sources", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "themefications", force: :cascade do |t|
+    t.integer  "game_id"
+    t.integer  "theme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

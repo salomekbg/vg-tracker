@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ClassificationsControllerTest < ActionDispatch::IntegrationTest
+class GenreficationsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

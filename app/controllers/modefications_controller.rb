@@ -1,0 +1,2 @@
+class ModeficationsController < ApplicationController
+end
