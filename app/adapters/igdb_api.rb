@@ -11,7 +11,7 @@ class IgdbApi
       if game["release_dates"]
         Game.find_or_create_by(name: game["name"], year: game["release_dates"][0]["human"][0..3], summary: game["summary"], cover: game["cover"])
       else
-        Game.find_or_create_by(name: game["name"], year: "No Year Available")
+        Game.find_or_create_by(name: game["name"], year: "No Year Available", summary: game["summary"], cover: game["cover"])
       end
     end
   end
