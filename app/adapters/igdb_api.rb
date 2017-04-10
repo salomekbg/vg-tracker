@@ -8,19 +8,24 @@ class IgdbApi
     }
 
     games.body.each do |game|
-      if game["release_dates"]
+      if game["name"] && game["release_dates"] && game["summary"] && game["cover"]
         Game.find_or_create_by(name: game["name"], year: game["release_dates"][0]["human"][0..3], summary: game["summary"], cover: game["cover"]["url"])
-      else
+      elsif !game["release_dates"] && !game["summary"] && !game["cover"]
+        Game.find_or_create_by(name: game["name"], year: "No Year Available", summary: "No Summary Available", cover: "")
+      elsif !game["release_dates"] && !game["summary"]
+        Game.find_or_create_by(name: game["name"], year: "No Year Available", summary: "No Summary Available", cover: game["cover"]["url"])
+      elsif !game["release_dates"] && !game["cover"]
+        Game.find_or_create_by(name: game["name"], year: "No Year Available", summary: game["summary"], cover: "")
+      elsif !game["summary"] && !game["cover"]
+        Game.find_or_create_by(name: game["name"], year: game["release_dates"][0]["human"][0..3], summary: "No Summary Available", cover: "")
+      elsif !game["release_dates"]
         Game.find_or_create_by(name: game["name"], year: "No Year Available", summary: game["summary"], cover: game["cover"]["url"])
+      elsif !game["summary"]
+        Game.find_or_create_by(name: game["name"], year: game["release_dates"][0]["human"][0..3], summary: "No Summary Available", cover: game["cover"]["url"])
+      elsif !game["cover"]
+        Game.find_or_create_by(name: game["name"], year: game["release_dates"][0]["human"][0..3], summary: game["summary"], cover: "")
       end
     end
-  end
-
-  def self.get_genres
-    Unirest.get "https://igdbcom-internet-game-database-v1.p.mashape.com/genres/?fields=name&limit=50",
-    headers:{
-      "X-Mashape-Key" => "LC6dJEpGZVmshUoieKLHL6Gumqwwp1rTJmvjsnJhpSSyDsSUd7"
-    }
   end
 
 end
