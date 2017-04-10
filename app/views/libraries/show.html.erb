@@ -1,5 +1,5 @@
 <div class="left">
-  <h2>Show Library Entry for <%= @library.game.name%>:</h2>
+  <h2>Show Library Entry for <a href="<%= game_path(@library.game)%>"><%= @library.game.name%></a>:</h2>
   <br />
   <h3>Platform: <%= @library.platform.name %></h3>
   <h3>Source: <%= @library.source.name %></h3>
