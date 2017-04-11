@@ -10,6 +10,8 @@
   <%= @game.genres.empty? ? 'No genres available!' : @game.genres.uniq.map {|genre| genre.name}.join(', ') %></h3>
   <h3>Modes:
   <%= @game.modes.empty? ? 'No modes available!' : @game.modes.uniq.map {|mode| mode.name}.join(', ') %></h3>
+  <h3>Themes:
+  <%= @game.themes.empty? ? 'No themes available!' : @game.themes.uniq.map {|theme| theme.name}.join(', ') %></h3>
   <h3>Platforms that this game has been purchased for:
   <%= @game.platforms.empty? ? 'No platforms have been assigned yet!' : @game.platforms.uniq.map {|platform| platform.name}.join(', ') %></h3>
   <h3>Purchased From:

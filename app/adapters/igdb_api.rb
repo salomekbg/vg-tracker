@@ -49,6 +49,17 @@ class IgdbApi
         end
       end
 
+      if game["themes"]
+        theme_names = game["themes"].map do |game_theme|
+          IgdbApi.get_themes.select { |theme| theme if theme["id"] == game_theme}
+        end.flatten.map {|theme| theme["name"]}
+
+        theme_names.each do |name|
+          theme = Theme.find_by(name: name)
+          Themefication.find_or_create_by(game_id: entry.id, theme_id: theme.id)
+        end
+      end
+
     end
   end
 
@@ -66,6 +77,15 @@ class IgdbApi
       "X-Mashape-Key" => "LC6dJEpGZVmshUoieKLHL6Gumqwwp1rTJmvjsnJhpSSyDsSUd7"
     }
     modes.body
+  end
+
+  def self.get_themes
+    themes = Unirest.get "https://igdbcom-internet-game-database-v1.p.mashape.com/themes/?fields=name&limit=50",
+    headers:{
+      "X-Mashape-Key" => "LC6dJEpGZVmshUoieKLHL6Gumqwwp1rTJmvjsnJhpSSyDsSUd7",
+      "Accept" => "application/json"
+    }
+    themes.body
   end
 
 end

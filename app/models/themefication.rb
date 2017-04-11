@@ -10,4 +10,9 @@
 #
 
 class Themefication < ApplicationRecord
+  validates :game_id, presence: true
+  validates :theme_id, presence: true
+
+  belongs_to :game
+  belongs_to :theme
 end
