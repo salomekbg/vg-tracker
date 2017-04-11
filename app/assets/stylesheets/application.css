@@ -45,11 +45,14 @@ body {
 }
 
 .nav {
-  color: white;
   text-align: right;
   margin-top: -70px;
   margin-right: 20px;
   font-size: 25px;
+}
+
+.search {
+  margin-right: 10px;
 }
 
 h2 {
@@ -129,22 +132,33 @@ a {
   color: #476AE8;
 }
 
-.logo a:visited, .nav a:visited {
+.logo a:visited {
   color: white;
+}
+
+.nav a:visited {
+  color: black;
 }
 
 a:visited {
   color: #476AE8;
 }
 
-a:hover, .nav a:hover {
+a:hover {
   color: green;
+}
+
+.nav a:hover {
+  background-color: green;
+  border: 1px solid green;
 }
 
 .signout, .search {
   padding: 5px;
   border: 1px solid white;
   border-radius: 5px;
+  background-color: white;
+  color: black;
 }
 
 .user_info {
