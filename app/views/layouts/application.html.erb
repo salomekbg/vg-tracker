@@ -11,9 +11,10 @@
   <body>
     <div class="header">
       <div class="logo"><a href="/">VG Tracker</a></div>
-      <div class="signout">
+      <div class="nav">
         <% if session[:user_id] && session[:user_id] == @current_user.id %>
-          <%= link_to 'Sign Out', '/signout', method: 'delete' %>
+          <%= link_to 'Search for Games', '/games', method: 'get', class: 'search' %>
+          <%= link_to 'Sign Out', '/signout', method: 'delete', class: 'signout'%>
         <% end %>
       </div >
     </div>

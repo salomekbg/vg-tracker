@@ -44,7 +44,7 @@ body {
  font-family: 'Love Ya Like A Sister', cursive;
 }
 
-.signout {
+.nav {
   color: white;
   text-align: right;
   margin-top: -70px;
@@ -129,7 +129,7 @@ a {
   color: #476AE8;
 }
 
-.logo a:visited, .signout a:visited {
+.logo a:visited, .nav a:visited {
   color: white;
 }
 
@@ -137,6 +137,32 @@ a:visited {
   color: #476AE8;
 }
 
-a:hover, .signout a:hover {
+a:hover, .nav a:hover {
   color: green;
+}
+
+.signout, .search {
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.user_info {
+  background-color: #A1A0A0;
+  width: 400px;
+  margin-bottom: 20px;
+  height: 250px;
+  float: left;
+  margin-right: 50px;
+  overflow: scroll;
+}
+
+.user_body {
+}
+
+.user_info h3 {
+  background-color: #DCDBDA;
+  height: 25px;
+  margin: 0;
+  padding: 10px;
 }
