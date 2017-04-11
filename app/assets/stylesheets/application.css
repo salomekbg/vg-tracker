@@ -21,8 +21,12 @@ body {
  margin: 0;
 }
 
-h1 {
+.header {
   background-color: black;
+  height: 100px;
+}
+
+.logo {
   color: white;
   margin: 0;
   padding-top: 15px;
@@ -36,8 +40,16 @@ h1 {
   font-size: 24px;
 }
 
-h1, h2 {
+.logo, h2 {
  font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.signout {
+  color: white;
+  text-align: right;
+  margin-top: -70px;
+  margin-right: 20px;
+  font-size: 25px;
 }
 
 h2 {
@@ -76,7 +88,7 @@ input[type=submit] {
   margin-right: 15px;
 }
 
-.signin, .signup, .signout {
+.signin, .signup {
   width: 120px;
 }
 
@@ -117,7 +129,7 @@ a {
   color: #476AE8;
 }
 
-h1 a:visited {
+.logo a:visited, .signout a:visited {
   color: white;
 }
 
@@ -125,6 +137,6 @@ a:visited {
   color: #476AE8;
 }
 
-a:hover {
+a:hover, .signout a:hover {
   color: green;
 }

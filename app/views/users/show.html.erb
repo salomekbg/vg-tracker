@@ -79,11 +79,4 @@
       <% end %>
     <% end %>
   </ul>
-
-  <br /><br />
-  <div class="signout-button">
-    <% if session[:user_id] == @user.id %>
-      <%= button_to 'Sign Out', '/signout', method: 'delete', class: 'signout' %>
-    <% end %>
-  </div>
 </div>

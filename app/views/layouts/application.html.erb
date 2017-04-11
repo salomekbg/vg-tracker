@@ -9,7 +9,15 @@
   </head>
 
   <body>
-    <h1><a href="/">VG Tracker</a></h1>
+    <div class="header">
+      <div class="logo"><a href="/">VG Tracker</a></div>
+      <div class="signout">
+        <% if session[:user_id] && session[:user_id] == @current_user.id %>
+          <%= link_to 'Sign Out', '/signout', method: 'delete' %>
+        <% end %>
+      </div >
+    </div>
+
     <%= yield %>
   </body>
 </html>
