@@ -35,8 +35,6 @@ ActiveRecord::Schema.define(version: 20170410182720) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "mode_id"
-    t.integer  "theme_id"
   end
 
   create_table "libraries", force: :cascade do |t|

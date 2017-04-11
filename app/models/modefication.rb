@@ -10,4 +10,9 @@
 #
 
 class Modefication < ApplicationRecord
+  validates :game_id, presence: true
+  validates :mode_id, presence: true
+
+  belongs_to :game
+  belongs_to :mode
 end

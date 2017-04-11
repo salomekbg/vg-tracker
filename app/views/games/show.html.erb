@@ -7,8 +7,10 @@
   <h3>Summary:
   <%= !@game.summary ? 'No summary to show!' : @game.summary %></h3>
   <h3>Genres:
-  <%= @game.genres.empty? ? 'No genres have been assigned yet!' : @game.genres.uniq.map {|genre| genre.name}.join(', ') %></h3>
-  <h3>Available Platforms:
+  <%= @game.genres.empty? ? 'No genres available!' : @game.genres.uniq.map {|genre| genre.name}.join(', ') %></h3>
+  <h3>Modes:
+  <%= @game.modes.empty? ? 'No modes available!' : @game.modes.uniq.map {|mode| mode.name}.join(', ') %></h3>
+  <h3>Platforms that this game has been purchased for:
   <%= @game.platforms.empty? ? 'No platforms have been assigned yet!' : @game.platforms.uniq.map {|platform| platform.name}.join(', ') %></h3>
   <h3>Purchased From:
   <%= @game.sources.empty? ? 'No retailers have been assigned yet!' : @game.sources.uniq.map {|source| source.name}.join(', ') %></h3>
