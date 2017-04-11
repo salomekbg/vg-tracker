@@ -28,7 +28,12 @@ h1 {
   padding-top: 15px;
   padding-bottom: 25px;
   font-size: 50px;
-  text-align: center;
+  padding-left: 20px;
+}
+
+.intro {
+  padding-left: 20px;
+  font-size: 24px;
 }
 
 h1, h2 {
@@ -43,6 +48,16 @@ input[type=text], input[type=password] {
   font-family: 'Sniglet', cursive;
   padding: 10px;
   font-size: 14px;
+  width: 200px;
+}
+
+textarea {
+  font-family: 'Sniglet', cursive;
+  width: 215px;
+  height: 125px;
+  font-size: 14px;
+  border: 1px solid rgb(204, 204, 204);
+  resize: none;
 }
 
 select {
@@ -100,6 +115,10 @@ li {
 a {
   text-decoration: none;
   color: #476AE8;
+}
+
+h1 a:visited {
+  color: white;
 }
 
 a:visited {
