@@ -14,7 +14,7 @@
     <h3><%= f.label 'Hours Played:' %></h3>
     <%= f.text_field :hours_played %>
     <h3><%= f.label 'Notes:' %></h3>
-    <%= f.text_field :notes %>
+    <%= f.text_area :notes %>
     <br /><br />
     <%= hidden_field_tag(:game_id, params[:game_id]) %>
     <%= f.submit 'Add to Your Account' %>
