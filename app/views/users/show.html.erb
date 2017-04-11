@@ -30,6 +30,32 @@
 
   <br />
 
+  <h3>Modes That You Seem to Like Playing:</h3>
+  <ul>
+    <% if @user.modes.uniq.empty? %>
+      <li>No modes to show!</li>
+    <% else %>
+      <% @user.modes.uniq.map do |mode| %>
+        <li><%= mode.name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <br />
+
+  <h3>Themes That You Seem to Like Playing:</h3>
+  <ul>
+    <% if @user.themes.uniq.empty? %>
+      <li>No themes to show!</li>
+    <% else %>
+      <% @user.themes.uniq.map do |theme| %>
+        <li><%= theme.name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <br />
+
   <h3>Consoles That You Have Played On:</h3>
   <ul>
     <% if @user.platforms.uniq.empty? %>
