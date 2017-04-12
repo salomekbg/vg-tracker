@@ -19,7 +19,7 @@
         </tr>
         <% @libraries.map do |library| %>
         <tr>
-          <td><%= link_to library.game.name, library %><br />Notes: <%= library.notes %></td>
+          <td><%= link_to library.game.name, game_path(library.game) %><br />Notes: <%= library.notes %></td>
           <td><%= library.platform.name %></td>
           <td><%= library.source.name %></td>
           <td><%= library.status %></td>
