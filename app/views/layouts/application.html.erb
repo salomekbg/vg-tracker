@@ -3,22 +3,27 @@
   <head>
     <title>VGTracker</title>
     <%= csrf_meta_tags %>
-
+    <script src="https://use.fontawesome.com/1827ac8642.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="header">
-      <div class="logo"><a href="/">VG Tracker</a></div>
-      <div class="nav">
-        <% if session[:user_id] && session[:user_id] == @current_user.id %>
-          <%= link_to 'Search for Games', '/games', method: 'get', class: 'search' %>
-          <%= link_to 'Sign Out', '/signout', method: 'delete', class: 'signout'%>
-        <% end %>
-      </div >
+    <div class="fixed-container">
+      <div class="header">
+        <div class="logo"><a href="/">VG Tracker</a></div>
+        <div class="nav">
+          <% if session[:user_id] && session[:user_id] == @current_user.id %>
+            <%= link_to 'Search for Games', '/games', method: 'get', class: 'search' %>
+            <%= link_to 'Sign Out', '/signout', method: 'delete', class: 'signout'%>
+          <% end %>
+        </div >
+      </div>
     </div>
 
-    <%= yield %>
+    <div class="main">
+      <%= yield %>
+    </div>
+
   </body>
 </html>

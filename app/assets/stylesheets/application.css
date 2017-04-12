@@ -17,8 +17,27 @@
 
 body {
  font-family: 'Sniglet', cursive;
- background-image: url('sayagata-400px.png');
- margin: 0;
+ background: url('68826634-free-rainbow-wallpapers.jpg') no-repeat center center fixed;
+ /*background: url('68943164-free-rainbow-wallpapers.jpg') no-repeat center center fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  background-color: rgba(255, 255, 255, .50);
+
+}
+
+.main {
+  width: 75%;
+  height: 1000px;
+  margin: 0;
+  margin-left: 12%;
+}
+
+.fixed-container {
+  position: fixed;
+  width: 100%;
 }
 
 .header {
@@ -36,8 +55,10 @@ body {
 }
 
 .intro {
-  padding-left: 20px;
-  font-size: 24px;
+  margin: auto;
+  width: 75%;
+  padding: 10px 0;
+  font-size: 30px;
 }
 
 .logo, h2 {
@@ -105,13 +126,16 @@ form .search-games {
 }
 
 .center {
+  padding: 100px 0 50px 0;
   text-align: center;
   width: 50%;
   margin: auto;
+  background-color: rgba(0, 0, 0, .25)
 }
 
 .left {
-  padding-left: 50px;
+  padding: 100px 50px 50px 50px;
+  /*background-color: rgba(255, 255, 255, .25)*/
 }
 
 .single-button {
@@ -132,19 +156,22 @@ a {
   color: #476AE8;
 }
 
-.logo a:visited {
-  color: white;
-}
-
-.nav a:visited {
+.no-link a {
   color: black;
 }
 
 a:visited {
   color: #476AE8;
 }
+.logo a:visited {
+  color: white;
+}
 
-a:hover {
+.nav a:visited, .no-link a:visited {
+  color: black;
+}
+
+a:hover, .no-link a:hover {
   color: green;
 }
 
@@ -161,22 +188,50 @@ a:hover {
   color: black;
 }
 
-.user_info {
-  background-color: #A1A0A0;
-  width: 400px;
+.user_games, .user_info {
+  background-color: rgba(255, 255, 255, .5);
   margin-bottom: 20px;
-  height: 250px;
   float: left;
   margin-right: 50px;
   overflow: scroll;
+  box-shadow: 5px 5px 5px black;
 }
 
-.user_body {
+.user_games {
+  width: 1000px;
+  height: 500px;
 }
 
-.user_info h3 {
-  background-color: #DCDBDA;
+.user_info {
+  width: 300px;
+  height: 250px;
+}
+
+.user_info h3, .user_games h3 {
+  background-color: rgba(255, 255, 255, .25);
   height: 25px;
   margin: 0;
+  padding: 10px;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+td {
   padding: 10px;
 }
