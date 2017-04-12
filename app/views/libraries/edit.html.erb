@@ -7,7 +7,7 @@
     <h3><%= f.label 'Source:' %></h3>
     <%= f.select :source_id, options_for_select(@sources.map {|source| [source.name, source.id]}) %>
     <h3><%= f.label 'Status:' %></h3>
-    <%= f.text_field :status %>
+    <%= f.select :status, options_for_select(['Not Yet Started', 'Just Started', 'In Progress', 'Almost Done', 'Completed', 'Abandoned']) %>
     <h3><%= f.label 'Personal Rating:' %></h3>
     <h4>(1 through 10, 10 being the best game ever!)</h4>
     <%= f.select :personal_rating, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) %>
