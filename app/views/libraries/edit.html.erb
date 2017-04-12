@@ -3,14 +3,14 @@
   <br />
   <%= form_for @library do |f| %>
     <h3><%= f.label 'Platform:' %></h3>
-    <%= f.select :platform_id, options_for_select(@platforms.map {|platform| [platform.name, platform.id]}) %>
+    <%= f.select :platform_id, options_for_select(@platforms.map {|platform| [platform.name, platform.id]}, selected: [@library.platform.name, @library.platform.id]) %>
     <h3><%= f.label 'Source:' %></h3>
-    <%= f.select :source_id, options_for_select(@sources.map {|source| [source.name, source.id]}) %>
+    <%= f.select :source_id, options_for_select(@sources.map {|source| [source.name, source.id]}, selected: [@library.source.name, @library.source.id]) %>
     <h3><%= f.label 'Status:' %></h3>
-    <%= f.select :status, options_for_select(['Not Yet Started', 'Just Started', 'In Progress', 'Almost Done', 'Completed', 'Abandoned']) %>
+    <%= f.select :status, options_for_select(['Not Yet Started', 'Just Started', 'In Progress', 'Almost Done', 'Completed', 'Abandoned'], selected: @library.status) %>
     <h3><%= f.label 'Personal Rating:' %></h3>
     <h4>(1 through 10, 10 being the best game ever!)</h4>
-    <%= f.select :personal_rating, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) %>
+    <%= f.select :personal_rating, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], selected: @library.personal_rating) %>
     <h3><%= f.label 'Hours Played:' %></h3>
     <%= f.text_field :hours_played %>
     <h3><%= f.label 'Notes:' %></h3>
