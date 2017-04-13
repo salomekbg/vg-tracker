@@ -1,32 +1,33 @@
-<div class="center">
+<div class="main">
+  <div class="center">
 
-  <h2>Sign Up:</h2>
-  <% if @user.errors.any? %>
-    <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+    <h2>Sign Up:</h2>
+    <% if @user.errors.any? %>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
       <% end %>
-    </ul>
+    <br />
+    
+    <%= form_for @user do |f| %>
+      <h3><%= f.label 'Username:' %></h3>
+      <%= f.text_field :username %>
+      <br />
+      <h3><%= f.label 'Email Address:' %></h3>
+      <%= f.text_field :email_address %>
+      <br />
+      <h3><%= f.label 'Password:' %></h3>
+      <%= f.password_field :password %>
+      <br />
+      <h3><%= f.label 'Password Confirmation:' %></h3>
+      <%= f.password_field :password_confirmation %>
+      <br /><br />
+      <div class="single-button">
+        <%= f.submit 'Create Account', class: "create_account" %>
+      </div>
     <% end %>
-  <br />
-  <%= form_for @user do |f| %>
-    <h3><%= f.label 'Username:' %></h3>
-    <%= f.text_field :username %>
-    <br />
-    <h3><%= f.label 'Email Address:' %></h3>
-    <%= f.text_field :email_address %>
-    <br />
-    <h3><%= f.label 'Password:' %></h3>
-    <%= f.password_field :password %>
-    <br />
-    <h3><%= f.label 'Password Confirmation:' %></h3>
-    <%= f.password_field :password_confirmation %>
-    <br /><br />
-    <div class="single-button">
-      <%= f.submit 'Create Account', class: "signup" %>
-    </div>
+  </div>
 
-  <% end %>
-  <br /><br /><br />
-  <h2>Did you want to <a href="/signin">Sign In</a> instead?</h2>
 </div>

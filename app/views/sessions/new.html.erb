@@ -1,22 +1,23 @@
-<div class="center">
+<div class="main">
+  <div class="center">
 
-  <h2>Sign In:</h2>
-  <% if @error != "" %>
-    <h2><%= @error %></h2>
-  <% end %>
-  <br />
-  
-  <%= form_for(:session, url: '/signin') do |f| %>
-    <h3><%= f.label 'Username:' %></h3>
-    <%= f.text_field :username %>
+    <h2>Sign In:</h2>
+    <% if @error != "" %>
+      <h2><%= @error %></h2>
+    <% end %>
     <br />
-    <h3><%= f.label 'Password:' %></h3>
-    <%= f.password_field :password %>
-    <br /><br />
-    <div class="single-button">
-      <%= f.submit 'Sign In', class: "signin"%>
-    </div>
-  <% end %>
-  <br /><br /><br />
-  <h2>Did you want to <a href="/signup">Sign Up</a> instead?</h2>
+
+    <%= form_for(:session, url: '/signin') do |f| %>
+      <h3><%= f.label 'Username:' %></h3>
+      <%= f.text_field :username %>
+      <br />
+      <h3><%= f.label 'Password:' %></h3>
+      <%= f.password_field :password %>
+      <br /><br />
+      <div class="single-button">
+        <%= f.submit 'Sign In', class: "signin_button"%>
+      </div>
+    <% end %>
+  </div>
+
 </div>
