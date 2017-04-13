@@ -1,76 +1,83 @@
-<div class="left">
-  <h2>Profile for <%= @user.username %>:</h2>
-  <br />
-
-  <div class="user_games">
-    <h3>Games Currently In Your Library:</h3>
-    <table>
-      <% if @libraries.empty? %>
-        <li>No games to show!</li>
-        <br />
-      <% else %>
-        <tr>
-          <td>Name</td>
-          <td>Platform</td>
-          <td>Source</td>
-          <td>Status</td>
-          <td>Personal Rating</td>
-          <td>Hours Played</td>
-        </tr>
-        <% @libraries.map do |library| %>
-        <tr>
-          <td><%= link_to library.game.name, game_path(library.game) %><br />Notes: <%= library.notes %></td>
-          <td><%= library.platform.name %></td>
-          <td><%= library.source.name %></td>
-          <td><%= library.status %></td>
-          <td><%= library.personal_rating %></td>
-          <td><%= library.hours_played %></td>
-          <td class="no-link"><%= link_to '<i class="fa fa-pencil fa-lg" aria-hidden="true"></i>'.html_safe, edit_library_path(library), method: 'get' %></td>
-          <td class="no-link"><%= link_to '<i class="fa fa-trash fa-lg" aria-hidden="true"></i>'.html_safe, library_path(library), method: 'delete' %></td>
-        </tr>
-        <% end %>
-      <% end %>
-    </table>
-  </div>
-
-  <div class="user_info">
-    <h3>Genres You Like Playing:</h3>
-    <ul>
-      <% if @user.genres.uniq.empty? %>
-        <li>No genres to show!</li>
-      <% else %>
-        <% @user.genres.uniq.map do |genre| %>
-          <li><%= genre.name %></li>
-        <% end %>
-      <% end %>
-    </ul>
-  </div>
-
-  <div class="user_info">
-    <h3>Themes You Like Playing:</h3>
-    <ul>
-      <% if @user.themes.uniq.empty? %>
-        <li>No themes to show!</li>
-      <% else %>
-        <% @user.themes.uniq.map do |theme| %>
-          <li><%= theme.name %></li>
-        <% end %>
-      <% end %>
-    </ul>
+<div class="main">
+  <div class="user-show">
+    <h2>Profile for <%= @user.username %>:</h2>
     <br />
-  </div>
 
-  <div class="user_info">
-    <h3>You've Purchased Your Games At:</h3>
-    <ul>
-      <% if @user.sources.uniq.empty? %>
-        No sources to show!
-      <% else %>
-        <% @user.sources.uniq.map do |source| %>
-          <li><%= source.name %></li>
+    <div class="user_games">
+      <h3>Games Currently In Your Library:</h3>
+      <table>
+        <% if @libraries.empty? %>
+        <tr>
+          <td>No games to show!</td>
+        </tr>
+        <% else %>
+          <tr>
+            <td>Name</td>
+            <td>Platform</td>
+            <td>Source</td>
+            <td>Status</td>
+            <td>Personal Rating</td>
+            <td>Hours Played</td>
+          </tr>
+          <% @libraries.map do |library| %>
+          <tr>
+            <td><%= link_to library.game.name, game_path(library.game) %>
+              <br />
+              Notes:
+              <%= library.notes.empty? ? 'No notes were made' : library.notes %></td>
+            <td><%= library.platform.name %></td>
+            <td><%= library.source.name %></td>
+            <td><%= library.status %></td>
+            <td><%= library.personal_rating %></td>
+            <td><%= library.hours_played.empty? ? '0' : library.hours_played %></td>
+            <td class="no-link"><%= link_to '<i class="fa fa-pencil fa-lg" aria-hidden="true"></i>'.html_safe, edit_library_path(library), method: 'get' %></td>
+            <td class="no-link"><%= link_to '<i class="fa fa-trash fa-lg" aria-hidden="true"></i>'.html_safe, library_path(library), method: 'delete' %></td>
+          </tr>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
+      </table>
+    </div>
+
+    <div class="user_info">
+      <h3>Genres You Like Playing:</h3>
+      <ul>
+        <% if @user.genres.uniq.empty? %>
+          <li>No genres to show!</li>
+        <% else %>
+          <% @user.genres.uniq.map do |genre| %>
+            <li><%= genre.name %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="user_info">
+      <h3>Themes You Like Playing:</h3>
+      <ul>
+        <% if @user.themes.uniq.empty? %>
+          <li>No themes to show!</li>
+        <% else %>
+          <% @user.themes.uniq.map do |theme| %>
+            <li><%= theme.name %></li>
+          <% end %>
+        <% end %>
+      </ul>
+      <br />
+    </div>
+
+    <div class="user_info">
+      <h3>You've Purchased Your Games At:</h3>
+      <ul>
+        <% if @user.sources.uniq.empty? %>
+          No sources to show!
+        <% else %>
+          <% @user.sources.uniq.map do |source| %>
+            <li><%= source.name %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+
   </div>
 
 </div>
