@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20170410182720) do
     t.integer  "platform_id"
     t.integer  "source_id"
     t.string   "status"
-    t.integer  "personal_rating"
+    t.string   "personal_rating"
     t.string   "hours_played"
     t.string   "notes"
     t.datetime "created_at",      null: false

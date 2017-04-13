@@ -6,8 +6,6 @@
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  mode_id    :integer
-#  theme_id   :integer
 #
 
 require 'test_helper'
