@@ -3,9 +3,8 @@ class LibrariesController < ApplicationController
 
   def new
     @library = Library.new
-    # @games = Game.all
-    @platforms = Platform.all
-    @sources = Source.all
+    @platforms = Platform.all.order(:name)
+    @sources = Source.all.order(:name)
   end
 
   def create
@@ -25,8 +24,8 @@ class LibrariesController < ApplicationController
 
   def edit
     @library = Library.find(params[:id])
-    @platforms = Platform.all
-    @sources = Source.all
+    @platforms = Platform.all.order(:name)
+    @sources = Source.all.order(:name)
   end
 
   def update
