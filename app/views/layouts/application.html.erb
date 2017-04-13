@@ -16,14 +16,17 @@
           <% if session[:user_id] && session[:user_id] == @current_user.id %>
             <%= link_to 'Search for Games', '/games', method: 'get', class: 'search' %>
             <%= link_to 'Sign Out', '/signout', method: 'delete', class: 'signout'%>
+          <% else %>
+            <div>
+              <%= link_to 'Sign Up', '/signup', method: 'get', class: 'signup' %>
+              <%= link_to 'Sign In', '/signin', method: 'get', class: 'signin' %>
+            </div>
           <% end %>
         </div >
       </div>
     </div>
 
-    <div class="main">
-      <%= yield %>
-    </div>
+    <%= yield %>
 
   </body>
 </html>
