@@ -1,23 +1,27 @@
-<div class="left">
-  <h2>Game Directory:</h2>
-  <br />
-  <%= form_tag(games_path, method: "get", id: "game-search") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
-    <%= submit_tag("Search", class: "search-games") %>
-  <% end %>
-  <h4>*Game data has been provided by API from igdb.com</h4>
-  <br />
-  <ul>
-    <% if @games.empty? %>
-      <li><h3>No games found, please try again!</h3></li>
-    <% else %>
-      <% @games.map do |game| %>
-        <li><h3><%= link_to game.name, game_path(game) %></h3></li>
-      <% end %>
+<div class="main">
+
+  <div class="left">
+    <h2>Game Directory:</h2>
+    <br />
+    <%= form_tag(games_path, method: "get", id: "game-search") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
+      <%= submit_tag("Search", class: "search-games") %>
     <% end %>
-  </ul>
-  <br /><br />
-  <% if @current_user.admin? %>
-    <%= button_to 'Add Game', new_game_path, method: 'get' %>
-  <% end %>
+    <h4>*Game data has been provided by API from igdb.com</h4>
+    <br />
+    <ul>
+      <% if @games.empty? %>
+        <li><h3>No games found, please try again!</h3></li>
+      <% else %>
+        <% @games.map do |game| %>
+          <li><h3><%= link_to game.name, game_path(game) %></h3></li>
+        <% end %>
+      <% end %>
+    </ul>
+    <br /><br />
+    <% if @current_user.admin? %>
+      <%= button_to 'Add Game', new_game_path, method: 'get' %>
+    <% end %>
+  </div>
+
 </div>

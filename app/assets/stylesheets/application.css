@@ -24,15 +24,14 @@ body {
   -o-background-size: cover;
   background-size: cover;
   margin: 0;
-  background-color: rgba(255, 255, 255, .50);
-
+  /*background-color: rgba(255, 255, 255, .50);*/
 }
 
 .main {
   width: 75%;
-  height: 1000px;
   margin: 0;
-  margin-left: 12%;
+  padding: 150px 0 0 10%;
+  margin-bottom: 50px;
 }
 
 .fixed-container {
@@ -55,10 +54,10 @@ body {
 }
 
 .intro {
-  margin: auto;
-  width: 75%;
-  padding: 10px 0;
   font-size: 30px;
+  background-color: rgba(255, 255, 255, .5);
+  padding: 25px;
+  height: 100%;
 }
 
 .logo, h2 {
@@ -70,10 +69,6 @@ body {
   margin-top: -70px;
   margin-right: 20px;
   font-size: 25px;
-}
-
-.search {
-  margin-right: 10px;
 }
 
 h2 {
@@ -112,34 +107,35 @@ input[type=submit] {
   margin-right: 15px;
 }
 
-.signin, .signup {
-  width: 120px;
-}
-
 form .search-games {
   float: none;
 }
 
-.entry-buttons {
-  width: 17%;
-  margin: auto;
-}
-
 .center {
-  padding: 100px 0 50px 0;
+  padding: 20px 20px 100px 20px;
   text-align: center;
   width: 50%;
-  margin: auto;
-  background-color: rgba(0, 0, 0, .25)
+  margin-left: 25%;
+  background-color: rgba(255, 255, 255, .5);
 }
 
 .left {
-  padding: 100px 50px 50px 50px;
-  /*background-color: rgba(255, 255, 255, .25)*/
+  padding: 20px 0px 100px 20px;
+  background-color: rgba(255, 255, 255, .5);
 }
 
 .single-button {
   width: 120px;
+  margin: auto;
+}
+
+.add_to_account {
+  width: 150px;
+  margin: auto;
+}
+
+.update_entry {
+  width: 110px;
   margin: auto;
 }
 
@@ -180,7 +176,7 @@ a:hover, .no-link a:hover {
   border: 1px solid green;
 }
 
-.signout, .search {
+.signout, .search, .signin, .signup {
   padding: 5px;
   border: 1px solid white;
   border-radius: 5px;
@@ -188,13 +184,20 @@ a:hover, .no-link a:hover {
   color: black;
 }
 
+.create_account, .signin_button {
+  width: 120px;
+}
+
+.search, .signup {
+  margin-right: 10px;
+}
+
 .user_games, .user_info {
-  background-color: rgba(255, 255, 255, .5);
   margin-bottom: 20px;
-  float: left;
   margin-right: 50px;
   overflow: scroll;
   box-shadow: 5px 5px 5px black;
+  background-color: rgba(255, 255, 255, .5);
 }
 
 .user_games {
@@ -203,6 +206,7 @@ a:hover, .no-link a:hover {
 }
 
 .user_info {
+  float: left;
   width: 300px;
   height: 250px;
 }
@@ -214,22 +218,8 @@ a:hover, .no-link a:hover {
   padding: 10px;
 }
 
-.outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
+table {
+  margin-left: 25px;
 }
 
 td {

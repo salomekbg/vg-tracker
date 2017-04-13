@@ -1,23 +1,28 @@
-<div class="left">
-  <h2>Edit Entry for <%= @library.game.name%>:</h2>
-  <br />
-  <%= form_for @library do |f| %>
-    <h3><%= f.label 'Platform:' %></h3>
-    <%= f.select :platform_id, options_for_select(@platforms.map {|platform| [platform.name, platform.id]}, selected: [@library.platform.name, @library.platform.id]) %>
-    <h3><%= f.label 'Source:' %></h3>
-    <%= f.select :source_id, options_for_select(@sources.map {|source| [source.name, source.id]}, selected: [@library.source.name, @library.source.id]) %>
-    <h3><%= f.label 'Status:' %></h3>
-    <%= f.select :status, options_for_select(['Not Yet Started', 'Just Started', 'In Progress', 'Almost Done', 'Completed', 'Abandoned'], selected: @library.status) %>
-    <h3><%= f.label 'Personal Rating:' %></h3>
-    <h4>(1 through 10, 10 being the best game ever!)</h4>
-    <%= f.select :personal_rating, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], selected: @library.personal_rating) %>
-    <h3><%= f.label 'Hours Played:' %></h3>
-    <%= f.text_field :hours_played %>
-    <h3><%= f.label 'Notes:' %></h3>
-    <%= f.text_field :notes %>
-    <br /><br />
-    <%= hidden_field_tag(:game_id, @library.game.id) %>
-    <%= f.submit 'Update Entry' %>
-  <% end %>
+<div class="main">
+
+  <div class="center">
+    <h2>Edit Entry for <%= @library.game.name%>:</h2>
+    <br />
+    <%= form_for @library do |f| %>
+      <h3><%= f.label 'Platform:' %></h3>
+      <%= f.select :platform_id, options_for_select(@platforms.map {|platform| [platform.name, platform.id]}, selected: [@library.platform.name, @library.platform.id]) %>
+      <h3><%= f.label 'Source:' %></h3>
+      <%= f.select :source_id, options_for_select(@sources.map {|source| [source.name, source.id]}, selected: [@library.source.name, @library.source.id]) %>
+      <h3><%= f.label 'Status:' %></h3>
+      <%= f.select :status, options_for_select(['Not Yet Started', 'Just Started', 'In Progress', 'Almost Done', 'Completed', 'Abandoned'], selected: @library.status) %>
+      <h3><%= f.label 'Personal Rating:' %></h3>
+      <%= f.select :personal_rating, options_for_select(["1 (worst)", "2", "3", "4", "5", "6", "7", "8", "9", "10 (best ever!)"], selected: @library.personal_rating) %>
+      <h3><%= f.label 'Hours Played:' %></h3>
+      <%= f.text_field :hours_played %>
+      <h3><%= f.label 'Notes:' %></h3>
+      <%= f.text_area :notes %>
+      <br /><br />
+      <%= hidden_field_tag(:game_id, @library.game.id) %>
+      <div class="update_entry">
+        <%= f.submit 'Update Entry' %>
+      </div>
+    <% end %>
+
+  </div>
 
 </div>
