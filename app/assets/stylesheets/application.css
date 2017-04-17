@@ -18,8 +18,9 @@
 /*set style and background for body*/
 body {
  font-family: 'Sniglet', cursive;
- background: url('68826634-free-rainbow-wallpapers.jpg') no-repeat center center fixed;
+ /*background: url('68826634-free-rainbow-wallpapers.jpg') no-repeat center center fixed;*/
  /*background: url('68943164-free-rainbow-wallpapers.jpg') no-repeat center center fixed;*/
+ background: url('6.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -54,7 +55,7 @@ body {
 /*style intro paragraph*/
 .intro {
   font-size: 30px;
-  background-color: rgba(255, 255, 255, .5);
+  /*background-color: rgba(255, 255, 255, .5);*/
   padding: 25px;
 }
 
@@ -120,7 +121,7 @@ form .search_games {
 .center {
   padding: 20px 40px 100px 40px;
   text-align: center;
-  background-color: rgba(255, 255, 255, .5);
+  /*background-color: rgba(255, 255, 255, .5);*/
 }
 
 /*center elements in user show page*/
@@ -165,7 +166,7 @@ li {
 /*style site links*/
 a {
   text-decoration: none;
-  color: #476AE8;
+  color: black;
 }
 
 /*style library edit and delete links*/
@@ -175,7 +176,7 @@ a {
 
 /*color of links when visited*/
 a:visited {
-  color: #476AE8;
+  color: black;
 }
 
 /*color of logo when visited*/
@@ -223,14 +224,14 @@ a:hover, .no_link a:hover {
   margin-bottom: 20px;
   margin-right: 50px;
   overflow: scroll;
-  box-shadow: 5px 5px 5px black;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(0, 192, 239, .25);
 }
 
 /*style information on user show page specific to the user games section*/
 .user_games {
   width: 1000px;
   height: 500px;
+  float: left;
 }
 
 /*style information on user show page specific to the other user sections*/
@@ -238,6 +239,10 @@ a:hover, .no_link a:hover {
   float: left;
   width: 300px;
   height: 250px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 /*style h3 tags in show user page*/
@@ -256,4 +261,5 @@ table {
 /*add some padding to table columns in show user section*/
 td {
   padding: 10px;
+  font-size: 20px;
 }
