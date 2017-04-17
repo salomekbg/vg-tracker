@@ -1,11 +1,11 @@
 <div class="main">
 
-  <div class="left">
+  <div class="center">
     <h2>Game Directory:</h2>
     <br />
     <%= form_tag(games_path, method: "get", id: "game-search") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
-      <%= submit_tag("Search", class: "search-games") %>
+      <%= submit_tag("Search", class: "search_games") %>
     <% end %>
     <h4>*Game data has been provided by API from igdb.com</h4>
     <br />
@@ -19,9 +19,12 @@
       <% end %>
     </ul>
     <br /><br />
-    <% if @current_user.admin? %>
-      <%= button_to 'Add Game', new_game_path, method: 'get' %>
-    <% end %>
+    <div class="add_game_button_position">
+      <% if @current_user.admin? %>
+        <%= button_to 'Add Game', new_game_path, method: 'get', class: 'add_game_button' %>
+      <% end %>
+    </div>
+
   </div>
 
 </div>

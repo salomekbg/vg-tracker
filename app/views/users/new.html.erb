@@ -10,7 +10,7 @@
       </ul>
       <% end %>
     <br />
-    
+
     <%= form_for @user do |f| %>
       <h3><%= f.label 'Username:' %></h3>
       <%= f.text_field :username %>
@@ -24,8 +24,8 @@
       <h3><%= f.label 'Password Confirmation:' %></h3>
       <%= f.password_field :password_confirmation %>
       <br /><br />
-      <div class="single-button">
-        <%= f.submit 'Create Account', class: "create_account" %>
+      <div class="single_button">
+        <%= f.submit 'Create Account', class: "create_account_button" %>
       </div>
     <% end %>
   </div>

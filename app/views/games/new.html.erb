@@ -1,23 +1,28 @@
-<div class="left">
-  <h2>Add a New Game:</h2>
-  <br />
-
-  <% if @game.errors.any? %>
-    <ul>
-      <% @game.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
-
-  <%= form_for @game do |f| %>
-    <h3><%= f.label 'Name:' %></h3>
-    <%= f.text_field :name %>
+<div class="main">
+  <div class="center">
+    <h2>Add a New Game:</h2>
     <br />
-    <h3><%= f.label 'Year:' %></h3>
-    <%= f.text_field :year %>
-    <br /><br />
-    <%= f.submit %>
-  <% end %>
+
+    <% if @game.errors.any? %>
+      <ul>
+        <% @game.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= form_for @game do |f| %>
+      <h3><%= f.label 'Name:' %></h3>
+      <%= f.text_field :name %>
+      <br />
+      <h3><%= f.label 'Year:' %></h3>
+      <%= f.text_field :year %>
+      <br /><br />
+      <div class="single_button">
+        <%= f.submit %>
+      </div>
+    <% end %>
+
+  </div>
 
 </div>

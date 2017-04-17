@@ -15,6 +15,7 @@
  */
  @import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Sniglet');
 
+/*set style and background for body*/
 body {
  font-family: 'Sniglet', cursive;
  background: url('68826634-free-rainbow-wallpapers.jpg') no-repeat center center fixed;
@@ -24,57 +25,58 @@ body {
   -o-background-size: cover;
   background-size: cover;
   margin: 0;
-  /*background-color: rgba(255, 255, 255, .50);*/
+  background-color: white;
 }
 
+/*style main div for all pages to provide spacing*/
 .main {
   width: 75%;
-  margin: 0;
-  padding: 150px 0 0 10%;
+  padding: 150px 0 0 12%;
   margin-bottom: 50px;
 }
 
-.fixed-container {
+/*style top navigation bar*/
+.header {
   position: fixed;
   width: 100%;
-}
-
-.header {
   background-color: black;
   height: 100px;
 }
 
+/*style logo*/
 .logo {
   color: white;
-  margin: 0;
   padding-top: 15px;
-  padding-bottom: 25px;
   font-size: 50px;
   padding-left: 20px;
 }
 
+/*style intro paragraph*/
 .intro {
   font-size: 30px;
   background-color: rgba(255, 255, 255, .5);
   padding: 25px;
-  height: 100%;
 }
 
+/*style font for logo and h2 tags*/
 .logo, h2 {
  font-family: 'Love Ya Like A Sister', cursive;
 }
 
-.nav {
+/*placement and font size of top navigational buttons*/
+.nav_buttons {
   text-align: right;
-  margin-top: -70px;
+  margin-top: -45px;
   margin-right: 20px;
   font-size: 25px;
 }
 
+/*font size of h2 tags*/
 h2 {
   font-size: 32px;
 }
 
+/*style of text and password fields*/
 input[type=text], input[type=password] {
   font-family: 'Sniglet', cursive;
   padding: 10px;
@@ -82,6 +84,7 @@ input[type=text], input[type=password] {
   width: 200px;
 }
 
+/*style of text area fields*/
 textarea {
   font-family: 'Sniglet', cursive;
   width: 215px;
@@ -91,44 +94,59 @@ textarea {
   resize: none;
 }
 
+/*set font size and bg color for drop-down lists*/
 select {
-  padding: 10px;
   font-size: 14px;
+  background-color: white;
 }
 
+/*style submit buttons*/
 input[type=submit] {
   background: white;
   padding: 10px;
   border-radius: 5px;
   float: left;
-  display: inline;
   font-size: 14px;
   font-family: 'Sniglet', cursive;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
-form .search-games {
+/*style search game form on game index page*/
+form .search_games {
   float: none;
 }
 
+/*make elements centered and give bg color*/
 .center {
-  padding: 20px 20px 100px 20px;
+  padding: 20px 40px 100px 40px;
   text-align: center;
-  width: 50%;
-  margin-left: 25%;
   background-color: rgba(255, 255, 255, .5);
 }
 
-.left {
-  padding: 20px 0px 100px 20px;
-  background-color: rgba(255, 255, 255, .5);
+/*center elements in user show page*/
+.center_no_bg {
+  margin-left: 10%;
 }
 
-.single-button {
+/*style single button on form*/
+.single_button {
   width: 120px;
   margin: auto;
 }
 
+/*style multiple buttons on form*/
+.multiple_buttons {
+  width: 385px;
+  margin: auto;
+}
+
+/*placement of add game button*/
+.add_game_button_position {
+  width: 70px;
+  margin: auto;
+}
+
+/*placement of add game to account button*/
 .add_to_account {
   width: 150px;
   margin: auto;
@@ -139,44 +157,50 @@ form .search-games {
   margin: auto;
 }
 
-select {
-  background-color: white;
-}
-
+/*remove bullet points from li tags*/
 li {
   list-style-type: none;
 }
 
+/*style site links*/
 a {
   text-decoration: none;
   color: #476AE8;
 }
 
-.no-link a {
+/*style library edit and delete links*/
+.no_link a {
   color: black;
 }
 
+/*color of links when visited*/
 a:visited {
   color: #476AE8;
 }
+
+/*color of logo when visited*/
 .logo a:visited {
   color: white;
 }
 
-.nav a:visited, .no-link a:visited {
+/*color of navigation, edit and delete links when visited*/
+.nav_buttons a:visited, .no_link a:visited {
   color: black;
 }
 
-a:hover, .no-link a:hover {
+/*color of links when hovering*/
+a:hover, .no_link a:hover {
   color: green;
 }
 
-.nav a:hover {
+/*color of navigation links when hovering*/
+.nav_buttons a:hover {
   background-color: green;
   border: 1px solid green;
 }
 
-.signout, .search, .signin, .signup {
+/*style buttons at top right*/
+.signout_top, .search_top, .signin_top, .signup_top {
   padding: 5px;
   border: 1px solid white;
   border-radius: 5px;
@@ -184,14 +208,17 @@ a:hover, .no-link a:hover {
   color: black;
 }
 
-.create_account, .signin_button {
-  width: 120px;
-}
-
-.search, .signup {
+/*space out buttons at top right*/
+.search_top, .signup_top {
   margin-right: 10px;
 }
 
+/*set width of initial form buttons to center on form*/
+.create_account_button, .signin_button, .add_game_button {
+  width: 120px;
+}
+
+/*style information on user show page*/
 .user_games, .user_info {
   margin-bottom: 20px;
   margin-right: 50px;
@@ -200,17 +227,20 @@ a:hover, .no-link a:hover {
   background-color: rgba(255, 255, 255, .5);
 }
 
+/*style information on user show page specific to the user games section*/
 .user_games {
   width: 1000px;
   height: 500px;
 }
 
+/*style information on user show page specific to the other user sections*/
 .user_info {
   float: left;
   width: 300px;
   height: 250px;
 }
 
+/*style h3 tags in show user page*/
 .user_info h3, .user_games h3 {
   background-color: rgba(255, 255, 255, .25);
   height: 25px;
@@ -218,10 +248,12 @@ a:hover, .no-link a:hover {
   padding: 10px;
 }
 
+/*position table in show user section*/
 table {
   margin-left: 25px;
 }
 
+/*add some padding to table columns in show user section*/
 td {
   padding: 10px;
 }
