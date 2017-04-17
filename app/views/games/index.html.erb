@@ -10,13 +10,16 @@
     <h4>*Game data has been provided by API from igdb.com</h4>
     <br />
     <ul>
-      <% if @games.empty? %>
-        <li><h3>No games found, please try again!</h3></li>
-      <% else %>
-        <% @games.map do |game| %>
-          <li><h3><%= link_to game.name, game_path(game) %></h3></li>
+      <div class="games">
+        <% if @games.empty? %>
+          <li><h3>No games found, please try again!</h3></li>
+        <% else %>
+          <% @games.map do |game| %>
+            <li><h3><%= link_to game.name, game_path(game) %></h3></li>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
+
     </ul>
     <br /><br />
     <div class="add_game_button_position">

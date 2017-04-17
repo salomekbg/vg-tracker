@@ -1,9 +1,9 @@
 <div class="main">
 
+  <div class="center_no_bg">
   <h2>Profile for <%= @user.username %>:</h2>
   <br />
 
-  <div class="center_no_bg">
     <div class="user_games">
       <h3>Games Currently In Your Library:</h3>
       <table>
@@ -22,10 +22,7 @@
           </tr>
           <% @libraries.map do |library| %>
           <tr>
-            <td><%= link_to library.game.name, game_path(library.game) %>
-              <br />
-              Notes:
-              <%= library.notes.empty? ? 'No notes were made' : library.notes %></td>
+            <td><%= link_to library.game.name, game_path(library.game) %></td>
             <td><%= library.platform.name %></td>
             <td><%= library.source.name %></td>
             <td><%= library.status %></td>
@@ -33,6 +30,11 @@
             <td><%= library.hours_played.empty? ? '0' : library.hours_played %></td>
             <td class="no_link"><%= link_to '<i class="fa fa-pencil fa-lg" aria-hidden="true"></i>'.html_safe, edit_library_path(library), method: 'get' %></td>
             <td class="no_link"><%= link_to '<i class="fa fa-trash fa-lg" aria-hidden="true"></i>'.html_safe, library_path(library), method: 'delete' %></td>
+          </tr>
+          <tr>
+            <td colspan="8"><h5>Notes:
+              <%= library.notes.empty? ? 'No notes were made' : library.notes %></h5>
+            </td>
           </tr>
           <% end %>
         <% end %>
@@ -67,10 +69,10 @@
     </div>
 
     <div class="user_info">
-      <h3>You've Purchased Your Games At:</h3>
+      <h3>Where You've Made Purchases:</h3>
       <ul>
         <% if @user.sources.uniq.empty? %>
-          No sources to show!
+          <li>No sources to show!</li>
         <% else %>
           <% @user.sources.uniq.map do |source| %>
             <li><%= source.name %></li>
