@@ -1,14 +1,14 @@
 <div class="main">
 
-  <div class="center">
+  <div class="center_big">
     <h2>Game Directory:</h2>
     <br />
     <%= form_tag(games_path, method: "get", id: "game-search") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
       <%= submit_tag("Search", class: "search_games") %>
     <% end %>
-    <h4>*Game data has been provided by API from igdb.com</h4>
-    <br />
+    <h5>*Game data has been provided by API from igdb.com</h5>
+    <br /><br /><br />
     <ul>
       <div class="games">
         <% if @games.empty? %>
