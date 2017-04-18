@@ -119,12 +119,17 @@ form .search_games {
 }
 
 /*make elements centered and give bg color*/
-.center {
+.center, .center_big {
   padding: 20px 40px 100px 40px;
   text-align: center;
   width: 25%;
   margin: auto;
   background-color: rgba(255, 255, 255, .75);
+}
+
+/*create a larger center style*/
+.center_big {
+  width: 75%;
 }
 
 /*center elements in user show page*/
@@ -249,7 +254,7 @@ a:hover, .no_link a:hover {
 }
 
 /*style all table headings on show user page*/
-h3 {
+.user_games h3, .user_info h3 {
   font-size: 20px;
   position: absolute;
 }
