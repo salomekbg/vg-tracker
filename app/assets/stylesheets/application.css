@@ -55,7 +55,7 @@ body {
 /*style intro paragraph*/
 .intro {
   font-size: 30px;
-  /*background-color: rgba(255, 255, 255, .5);*/
+  background-color: rgba(255, 255, 255, .75);
   padding: 25px;
 }
 
@@ -83,6 +83,7 @@ input[type=text], input[type=password] {
   padding: 10px;
   font-size: 14px;
   width: 200px;
+  border-radius: 5px;
 }
 
 /*style of text area fields*/
@@ -121,6 +122,9 @@ form .search_games {
 .center {
   padding: 20px 40px 100px 40px;
   text-align: center;
+  width: 25%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, .75);
 }
 
 /*center elements in user show page*/
@@ -152,6 +156,7 @@ form .search_games {
   margin: auto;
 }
 
+/*placement of update entry button*/
 .update_entry {
   width: 110px;
   margin: auto;
@@ -222,9 +227,9 @@ a:hover, .no_link a:hover {
 /*style information on user show page*/
 .user_games, .user_info {
   margin-bottom: 20px;
-  margin-right: 50px;
   overflow: scroll;
-  background-color: rgb(103, 192, 239);
+  /*background-color: rgb(103, 192, 239);*/
+  background-color: rgba(255, 255, 255, .75);
 }
 
 /*style information on user show page specific to the user games section*/
@@ -237,38 +242,58 @@ a:hover, .no_link a:hover {
 /*style information on user show page specific to the other user sections*/
 .user_info {
   float: left;
+  margin-right: 50px;
   width: 300px;
   height: 250px;
   overflow: scroll;
 }
 
+/*style all table headings on show user page*/
 h3 {
   font-size: 20px;
+  position: absolute;
+}
+
+/*style user_games heading on show user page*/
+.user_games h3 {
+  width: 980px;
+}
+
+/*style user_info heading on show user page*/
+.user_info h3 {
+  width: 280px;
 }
 
 /*style h3 tags in show user page*/
 .user_info h3, .user_games h3 {
-  background-color: rgba(255, 255, 255, .25);
+  /*background-color: rgb(141, 208, 243);*/
+  background-color: rgb(255, 255, 255);
   height: 25px;
   margin: 0;
   padding: 10px;
 }
 
-/*position table in show user section*/
+/*position table on show user section*/
 table {
   margin: 0 25px 0 25px;
+  margin-top: 40px;
 }
 
 /*add some padding to table columns in show user section*/
 td {
   padding: 10px;
   font-size: 20px;
+  vertical-align: bottom;
 }
 
-/*style library game notes*/
+/*style each table row on user show page*/
+h4 {
+  font-size: 20px;
+  margin-bottom: -45px;
+}
+
+/*style library game notes on user show page*/
 h5 {
-  margin-top: -10px;
   padding-bottom: 20px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 3px dotted black;
 }
