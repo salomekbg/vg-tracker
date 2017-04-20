@@ -7,9 +7,9 @@ class GamesController < ApplicationController
   def index
     if params[:search]
       IgdbApi.get_games(params[:search])
-      @games = Game.search(params[:search]).order(:name)
+      @games = Game.search(params[:search]).order('LOWER(name)')
     else
-      @games = Game.all.order(:name)
+      @games = Game.all.order('LOWER(name)')
     end
   end
 
@@ -53,6 +53,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :year)
+    params.require(:game).permit(:name, :year, :summary, :cover)
   end
 end
