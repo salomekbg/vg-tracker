@@ -18,8 +18,6 @@
 /*set style and background for body*/
 body {
  font-family: 'Sniglet', cursive;
- /*background: url('68826634-free-rainbow-wallpapers.jpg') no-repeat center center fixed;*/
- /*background: url('68943164-free-rainbow-wallpapers.jpg') no-repeat center center fixed;*/
  background: url('6.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -233,13 +231,13 @@ a:hover, .no_link a:hover {
 .user_games, .user_info {
   margin-bottom: 20px;
   overflow: scroll;
-  /*background-color: rgb(103, 192, 239);*/
   background-color: rgba(255, 255, 255, .75);
+  border: outset;
 }
 
 /*style information on user show page specific to the user games section*/
 .user_games {
-  width: 1000px;
+  width: 1015px;
   height: 350px;
   float: left;
 }
@@ -260,7 +258,6 @@ h3 {
 
 /*style all table headings on show user page*/
 .user_games h3, .user_info h3 {
-  font-size: 20px;
   position: absolute;
 }
 
@@ -276,7 +273,6 @@ h3 {
 
 /*style h3 tags in show user page*/
 .user_info h3, .user_games h3 {
-  /*background-color: rgb(141, 208, 243);*/
   background-color: rgb(255, 255, 255);
   height: 25px;
   margin: 0;
@@ -296,14 +292,24 @@ td {
   vertical-align: bottom;
 }
 
-/*style each table row on user show page*/
-h4 {
-  font-size: 20px;
-  margin-bottom: -45px;
+/*style each line of user_games on show user page*/
+.first {
+  margin-top: -20px;
+}
+
+/*style title of column of user_games on show user page*/
+.title {
+  margin-bottom: 20px;
 }
 
 /*style library game notes on user show page*/
-.user_games h5, .user_info h5 {
+.notes {
+  margin-top: -20px;
   padding-bottom: 20px;
   border-bottom: 3px dotted black;
+}
+
+/*style each line on the user_info sections on show user page*/
+h4 {
+  margin-bottom: -45px;
 }

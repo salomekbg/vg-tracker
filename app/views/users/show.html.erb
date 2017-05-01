@@ -13,27 +13,27 @@
         </tr>
         <% else %>
           <tr>
-            <td>Name</td>
-            <td>Platform</td>
-            <td>Source</td>
-            <td>Status</td>
-            <td>Personal Rating</td>
-            <td>Hours Played</td>
+            <td><h4 class="title">Name</h4></td>
+            <td><h4 class="title">Platform</h4></td>
+            <td><h4 class="title">Source</h4></td>
+            <td><h4 class="title">Status</h4></td>
+            <td><h4 class="title">Personal Rating</h4></td>
+            <td><h4 class="title">Hours Played</h4></td>
           </tr>
           <% @libraries.map do |library| %>
           <tr>
-            <td><h4><%= link_to library.game.name, game_path(library.game) %></h4></td>
-            <td><h4><%= library.platform.name %></h4></td>
-            <td><h4><%= library.source.name %></h4></td>
-            <td><h4><%= library.status %></h4></td>
-            <td><h4><%= library.personal_rating %></h4></td>
-            <td><h4><%= library.hours_played.empty? ? '0' : library.hours_played %></h4></td>
-            <td class="no_link"><h4><%= link_to '<i class="fa fa-pencil fa-lg" aria-hidden="true"></i>'.html_safe, edit_library_path(library), method: 'get' %></h4></td>
-            <td class="no_link"><h4><%= link_to '<i class="fa fa-trash fa-lg" aria-hidden="true"></i>'.html_safe, library_path(library), method: 'delete' %></h4></td>
+            <td><h5 class="first"><%= link_to library.game.name, game_path(library.game) %></h5></td>
+            <td><h5 class="first"><%= library.platform.name %></h5></td>
+            <td><h5 class="first"><%= library.source.name %></h5></td>
+            <td><h5 class="first"><%= library.status %></h5></td>
+            <td><h5 class="first"><%= library.personal_rating %></h5></td>
+            <td><h5 class="first"><%= library.hours_played.empty? ? '0' : library.hours_played %></h5></td>
+            <td class="no_link"><h4 class="first"><%= link_to '<i class="fa fa-pencil fa-lg" aria-hidden="true"></i>'.html_safe, edit_library_path(library), method: 'get' %></h5></td>
+            <td class="no_link"><h4 class="first"><%= link_to '<i class="fa fa-trash fa-lg" aria-hidden="true"></i>'.html_safe, library_path(library), method: 'delete' %></h5></td>
           </tr>
           <tr>
             <td colspan="8">
-              <h5><u>Notes:</u> <%= library.notes.empty? ? 'No notes were made' : library.notes %></h5>
+              <h5 class="notes"><u>Notes:</u> <%= library.notes.empty? ? 'No notes were made' : library.notes %></h5>
             </td>
           </tr>
           <% end %>
