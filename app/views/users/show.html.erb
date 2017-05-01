@@ -5,7 +5,7 @@
   <br />
 
     <div class="user_games">
-      <h3>Games Currently In Your Library:</h3>
+      <h3><u>Games Currently In Your Library:</u></h3>
       <table>
         <% if @libraries.empty? %>
         <tr>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="user_info">
-      <h3>Genres You Like Playing:</h3>
+      <h3><u>Genres You Like Playing:</u></h3>
       <table>
         <% if @user.genres.uniq.empty? %>
         <tr>
@@ -59,7 +59,7 @@
     </div>
 
     <div class="user_info">
-      <h3>Themes You Like Playing:</h3>
+      <h3><u>Themes You Like Playing:</u></h3>
       <table>
         <% if @user.themes.uniq.empty? %>
         <tr>
@@ -77,7 +77,7 @@
     </div>
 
     <div class="user_info">
-      <h3>Where You've Made Purchases:</h3>
+      <h3><u>Where You've Made Purchases:</u></h3>
       <table>
         <% if @user.sources.uniq.empty? %>
         <tr>
