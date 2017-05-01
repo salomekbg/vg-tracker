@@ -18,7 +18,7 @@
 /*set style and background for body*/
 body {
  font-family: 'Sniglet', cursive;
- background: url('6.png') no-repeat center center fixed;
+ background: url('/assets/6.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
