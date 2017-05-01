@@ -18,16 +18,13 @@
 /*set style and background for body*/
 body {
  font-family: 'Sniglet', cursive;
- background-image: url('/assets/6.png');
- background-repeat: no-repeat;
- background-position: center;
- background-attachment: fixed;
+ background-color: white;
+ background: url('/assets/6.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin: 0;
-  background-color: white;
 }
 
 /*style main div for all pages to provide spacing*/
