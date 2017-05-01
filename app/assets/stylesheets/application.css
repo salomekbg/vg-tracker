@@ -253,11 +253,6 @@ h3 {
   font-size: 20px;
 }
 
-/*style all table headings on show user page*/
-.user_games h3, .user_info h3 {
-  position: absolute;
-}
-
 /*style user_games heading on show user page*/
 .user_games h3 {
   width: 980px;
