@@ -19,6 +19,9 @@
 body {
   background-color: white;
   background-image: url('/assets/6.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   font-family: 'Sniglet', cursive;
   margin: 0;
