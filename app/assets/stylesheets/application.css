@@ -17,7 +17,7 @@
 
 /*set style and background for body*/
 body {
- background-color: black;
+ background-color: white;
  /*background: url('/assets/6.png') no-repeat center center fixed;*/
  background-image: url('/assets/6.png');
   -webkit-background-size: cover;
