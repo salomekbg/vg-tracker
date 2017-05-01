@@ -19,7 +19,8 @@
 body {
  font-family: 'Sniglet', cursive;
  /*background-color: white;*/
- background: url('/assets/6.png') no-repeat center center fixed;
+ /*background: url('/assets/6.png') no-repeat center center fixed;*/
+ background-image: url('/assets/6.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
