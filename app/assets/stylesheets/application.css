@@ -18,10 +18,7 @@
 /*set style and background for body*/
 body {
   background-color: white;
-  background-image: url('/assets/6.png');
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: url('/assets/6.png') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Sniglet', cursive;
   margin: 0;
