@@ -22,6 +22,7 @@ body {
   background-size: cover;
   font-family: 'Sniglet', cursive;
   margin: 0;
+  /*zoom: 90%;*/
 }
 
 /*style main div for all pages to provide spacing*/
@@ -43,13 +44,13 @@ body {
 .logo {
   color: white;
   padding-top: 15px;
-  font-size: 50px;
+  font-size: 40px;
   padding-left: 20px;
 }
 
 /*style intro paragraph*/
 .intro {
-  font-size: 30px;
+  font-size: 25px;
   background-color: rgba(255, 255, 255, .75);
   padding: 25px;
 }
@@ -64,19 +65,19 @@ body {
   text-align: right;
   margin-top: -45px;
   margin-right: 20px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 /*font size of h2 tags*/
 h2 {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 /*style of text and password fields*/
 input[type=text], input[type=password] {
   font-family: 'Sniglet', cursive;
   padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
   width: 200px;
   border-radius: 5px;
 }
@@ -86,14 +87,14 @@ textarea {
   font-family: 'Sniglet', cursive;
   width: 215px;
   height: 125px;
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid rgb(204, 204, 204);
   resize: none;
 }
 
 /*set font size and bg color for drop-down lists*/
 select {
-  font-size: 14px;
+  font-size: 12px;
   background-color: white;
 }
 
@@ -103,7 +104,7 @@ input[type=submit] {
   padding: 10px;
   border-radius: 5px;
   float: left;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Sniglet', cursive;
   margin-right: 10px;
 }
@@ -165,7 +166,7 @@ form .search_games {
 /*remove bullet points from li tags*/
 li {
   list-style-type: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /*style site links*/
@@ -250,7 +251,7 @@ a:hover, .no_link a:hover {
 
 /*style all h3 tags*/
 h3 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /*style user_games heading on show user page*/
@@ -280,7 +281,7 @@ table {
 /*add some padding to table columns in show user section*/
 td {
   padding: 10px;
-  font-size: 20px;
+  font-size: 16px;
   vertical-align: bottom;
 }
 
