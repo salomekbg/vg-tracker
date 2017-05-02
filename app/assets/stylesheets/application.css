@@ -274,7 +274,7 @@ h3 {
 
 /*position table on show user section*/
 table {
-  margin: 0 25px 0 25px;
+  margin: -10px 25px 0 25px;
 }
 
 /*add some padding to table columns in show user section*/
