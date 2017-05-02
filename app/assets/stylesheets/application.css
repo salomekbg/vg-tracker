@@ -134,7 +134,7 @@ form .search_games {
 
 /*style single button on form*/
 .single_button {
-  width: 110px;
+  width: 115px;
   margin: auto;
 }
 
@@ -146,7 +146,7 @@ form .search_games {
 
 /*placement of add game button*/
 .add_game_button_position {
-  width: 100px;
+  width: 85px;
   margin: auto;
 }
 
@@ -221,7 +221,7 @@ a:hover, .no_link a:hover {
 
 /*set width of initial form buttons to center on form*/
 .create_account_button, .signin_button, .add_game_button {
-  width: 135px;
+  width: 120px;
 }
 
 /*style information on user show page*/

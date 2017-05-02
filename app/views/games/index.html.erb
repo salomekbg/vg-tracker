@@ -3,7 +3,7 @@
   <div class="center_big">
     <h2>Game Directory:</h2>
     <br />
-    <%= form_tag(games_path, method: "get", id: "game-search") do %>
+    <%= form_tag(games_path, method: "get", id: "game_search") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
       <%= submit_tag("Search", class: "search_games") %>
     <% end %>
