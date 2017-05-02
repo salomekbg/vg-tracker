@@ -22,7 +22,6 @@ body {
   background-size: cover;
   font-family: 'Sniglet', cursive;
   margin: 0;
-  /*zoom: 90%;*/
 }
 
 /*style main div for all pages to provide spacing*/
@@ -37,7 +36,7 @@ body {
   position: fixed;
   width: 100%;
   background-color: black;
-  height: 100px;
+  height: 80px;
 }
 
 /*style logo*/
@@ -50,7 +49,7 @@ body {
 
 /*style intro paragraph*/
 .intro {
-  font-size: 25px;
+  font-size: 20px;
   background-color: rgba(255, 255, 255, .75);
   padding: 25px;
 }
@@ -63,7 +62,7 @@ body {
 /*placement and font size of top navigational buttons*/
 .nav_buttons {
   text-align: right;
-  margin-top: -45px;
+  margin-top: -40px;
   margin-right: 20px;
   font-size: 20px;
 }
@@ -135,19 +134,19 @@ form .search_games {
 
 /*style single button on form*/
 .single_button {
-  width: 135px;
+  width: 110px;
   margin: auto;
 }
 
 /*style multiple buttons on form*/
 .multiple_buttons {
-  width: 425px;
+  width: 400px;
   margin: auto;
 }
 
 /*placement of add game button*/
 .add_game_button_position {
-  width: 120px;
+  width: 100px;
   margin: auto;
 }
 
